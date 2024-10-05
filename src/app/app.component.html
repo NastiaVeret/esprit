@@ -1,42 +1,12 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<style>
-    h1 {
-        font-size: 3.125rem;
-        color: var(--gray-900);
-        font-weight: 500;
-        line-height: 100%;
-        letter-spacing: -0.125rem;
-        margin-left: 200px;
-        margin-top: 200px;
-        font-family: "Times New Roman", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    }
-</style>
-
 <main class="main">
     <div class="content">
-        <div class="left-side">
+        <ng-container *ngIf="!showMainPage">
             <h1>Перша <br>сходинка <br>до щастя - <br>здоров'я!</h1>
-        </div>
-
-
+            <img class="stairs" src="/assets/images/stairs_img.PNG" alt="Stairs Icon">
+            <button class="start-button" (click)="navigateToAnotherPage('MainPage')">Почати</button>
+            <img class="heart-icon" src="/assets/images/heart_img.JPG" alt="Heart Icon">
+        </ng-container>
     </div>
 </main>
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-<router-outlet />
+<router-outlet></router-outlet>
