@@ -1,0 +1,334 @@
+body {
+    background-color: #d1c4e9;
+}
+
+.main-page-button {
+    margin-top: 20px;
+    padding: 25px 150px;
+    font-size: 30px;
+    background-color: #040109;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 2px solid #040109;
+    top: 450px;
+    position: absolute;
+    right: 250px;
+    color: rgba(255, 255, 255, 0.763);
+}
+
+.input1 {
+    font-size: 20px;
+    top: 80px;
+    left: 100px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.input2 {
+    font-size: 20px;
+    top: 160px;
+    left: 100px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.input3 {
+    font-size: 20px;
+    top: 240px;
+    left: 100px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.input4 {
+    font-size: 20px;
+    top: 320px;
+    left: 100px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.input5 {
+    font-size: 20px;
+    top: 400px;
+    left: 100px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.input6 {
+    font-size: 20px;
+    top: 80px;
+    left: 800px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.input7 {
+    font-size: 20px;
+    top: 160px;
+    left: 800px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.input8 {
+    font-size: 20px;
+    top: 240px;
+    left: 800px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.input9 {
+    font-size: 20px;
+    top: 320px;
+    left: 800px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: absolute;
+}
+
+@media (max-width: 1350px) {
+    .main-page-button {
+        margin-top: 20px;
+        padding: 25px 150px;
+        font-size: 30px;
+        background-color: #040109;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: 2px solid #040109;
+        top: 450px;
+        position: absolute;
+        right: 120px;
+        color: rgba(255, 255, 255, 0.763);
+    }
+    .input1 {
+        font-size: 20px;
+        top: 80px;
+        left: 100px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .input2 {
+        font-size: 20px;
+        top: 160px;
+        left: 100px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .input3 {
+        font-size: 20px;
+        top: 240px;
+        left: 100px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .input4 {
+        font-size: 20px;
+        top: 320px;
+        left: 100px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .input5 {
+        font-size: 20px;
+        top: 400px;
+        left: 100px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .input6 {
+        font-size: 20px;
+        top: 80px;
+        left: 700px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .input7 {
+        font-size: 20px;
+        top: 160px;
+        left: 700px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .input8 {
+        font-size: 20px;
+        top: 240px;
+        left: 700px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .input9 {
+        font-size: 20px;
+        top: 320px;
+        left: 700px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+    }
+}
+
+@media (max-width: 1260px) {
+    .main-page-button {
+        margin-top: 20px;
+        padding: 25px 150px;
+        font-size: 30px;
+        background-color: #040109;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: 2px solid #040109;
+        top: 450px;
+        position: absolute;
+        right: 80px;
+        color: rgba(255, 255, 255, 0.763);
+    }
+}
+
+@media (max-width: 1230px) {
+    .main-page-button {
+        margin-top: 20px;
+        padding: 25px 150px;
+        font-size: 30px;
+        background-color: #040109;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: 2px solid #040109;
+        top: 450px;
+        position: absolute;
+        right: 60px;
+        color: rgba(255, 255, 255, 0.763);
+    }
+}
+
+@media (max-width: 1200px) {
+    .main-page-button {
+        margin-top: 20px;
+        padding: 25px 120px;
+        font-size: 30px;
+        background-color: #040109;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: 2px solid #040109;
+        top: 450px;
+        position: absolute;
+        right: 150px;
+        color: rgba(255, 255, 255, 0.763);
+    }
+    .input1 {
+        font-size: 20px;
+        top: 80px;
+        left: 80px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .input2 {
+        font-size: 20px;
+        top: 160px;
+        left: 80px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .input3 {
+        font-size: 20px;
+        top: 240px;
+        left: 80px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .input4 {
+        font-size: 20px;
+        top: 320px;
+        left: 80px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .input5 {
+        font-size: 20px;
+        top: 400px;
+        left: 80px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .input6 {
+        font-size: 20px;
+        top: 80px;
+        left: 600px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .input7 {
+        font-size: 20px;
+        top: 160px;
+        left: 600px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .input8 {
+        font-size: 20px;
+        top: 240px;
+        left: 600px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .input9 {
+        font-size: 20px;
+        top: 320px;
+        left: 600px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+}
+
+@media (max-width: 1140px) {
+    .main-page-button {
+        margin-top: 20px;
+        padding: 25px 120px;
+        font-size: 30px;
+        background-color: #040109;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: 2px solid #040109;
+        top: 450px;
+        position: absolute;
+        right: 80px;
+        color: rgba(255, 255, 255, 0.763);
+    }
+}
