@@ -10,9 +10,17 @@
             <input class="input7" type="text" id="inputField" name="inputField" required placeholder="Введіть RestingECG">
             <input class="input8" type="text" id="inputField" name="inputField" required placeholder="Введіть MaxHR">
             <input class="input9" type="text" id="inputField" name="inputField" required placeholder="Введіть ExerciseAngina">
-            <button type="submit" class="main-page-button">Надіслати</button>
+            <button type="submit" class="main-page-button" (click)="openModal(modalTemplate)">Надіслати</button>
         </form>
+          
     </main>
 </body>
 
 <router-outlet></router-outlet>
+
+<ng-template #modalTemplate>
+    <div class="modal-content">
+        <div class="modal-text">ВИ ЖИВІ!</div>
+        <img src="/assets/images/mc_petya.jpg" alt="mc_petya" class="modal-image">
+    </div>
+</ng-template>
