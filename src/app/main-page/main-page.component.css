@@ -12,13 +12,11 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
     border: 2px solid #040109;
-    top: 450px;
+    top: 480px;
     position: absolute;
     right: 250px;
     color: rgba(255, 255, 255, 0.763);
 }
-
-
 
 .input1 {
     font-size: 20px;
@@ -101,6 +99,15 @@ body {
     position: absolute;
 }
 
+.input10 {
+    font-size: 20px;
+    top: 400px;
+    left: 800px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: absolute;
+}
+
 @media (max-width: 1350px) {
     .main-page-button {
         margin-top: 20px;
@@ -112,7 +119,7 @@ body {
         cursor: pointer;
         transition: background-color 0.3s ease;
         border: 2px solid #040109;
-        top: 450px;
+        top: 480px;
         position: absolute;
         right: 120px;
         color: rgba(255, 255, 255, 0.763);
@@ -189,6 +196,14 @@ body {
         border-radius: 20px;
         position: absolute;
     }
+    .input10 {
+        font-size: 20px;
+        top: 400px;
+        left: 700px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+    }
 }
 
 @media (max-width: 1260px) {
@@ -202,7 +217,7 @@ body {
         cursor: pointer;
         transition: background-color 0.3s ease;
         border: 2px solid #040109;
-        top: 450px;
+        top: 480px;
         position: absolute;
         right: 80px;
         color: rgba(255, 255, 255, 0.763);
@@ -220,7 +235,7 @@ body {
         cursor: pointer;
         transition: background-color 0.3s ease;
         border: 2px solid #040109;
-        top: 450px;
+        top: 480px;
         position: absolute;
         right: 60px;
         color: rgba(255, 255, 255, 0.763);
@@ -238,7 +253,7 @@ body {
         cursor: pointer;
         transition: background-color 0.3s ease;
         border: 2px solid #040109;
-        top: 450px;
+        top: 480px;
         position: absolute;
         right: 150px;
         color: rgba(255, 255, 255, 0.763);
@@ -315,6 +330,14 @@ body {
         border-radius: 20px;
         position: absolute;
     }
+    .input10 {
+        font-size: 20px;
+        top: 400px;
+        left: 600px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
 }
 
 @media (max-width: 1140px) {
@@ -328,7 +351,7 @@ body {
         cursor: pointer;
         transition: background-color 0.3s ease;
         border: 2px solid #040109;
-        top: 450px;
+        top: 480px;
         position: absolute;
         right: 80px;
         color: rgba(255, 255, 255, 0.763);
@@ -351,8 +374,8 @@ body {
 }
 
 .modal-text {
-    font-family: 'Inter', sans-serif; 
-    font-weight: 100;                 
-    font-size: 30px;                  
-    line-height: 36.31px;             
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+    line-height: 36.31px;
 }
