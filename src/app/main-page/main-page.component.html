@@ -1,26 +1,25 @@
 <body>
     <main>
-        <form>
-            <input class="input1" type="text" id="inputField" name="inputField" required placeholder="Введіть вік">
-            <input class="input2" type="text" id="inputField" name="inputField" required placeholder="Введіть стать">
-            <input class="input3" type="text" id="inputField" name="inputField" required placeholder="Введіть ChestPainType">
-            <input class="input4" type="text" id="inputField" name="inputField" required placeholder="Введіть RestingBP">
-            <input class="input5" type="text" id="inputField" name="inputField" required placeholder="Введіть Cholesterol">
-            <input class="input6" type="text" id="inputField" name="inputField" required placeholder="Введіть FastingBS">
-            <input class="input7" type="text" id="inputField" name="inputField" required placeholder="Введіть RestingECG">
-            <input class="input8" type="text" id="inputField" name="inputField" required placeholder="Введіть MaxHR">
-            <input class="input9" type="text" id="inputField" name="inputField" required placeholder="Введіть ExerciseAngina">
-            <button type="submit" class="main-page-button" (click)="openModal(modalTemplate)">Надіслати</button>
+        <form (ngSubmit)="onSubmit(modalTemplate)">
+            <input class="input1" type="text" [(ngModel)]="formData.age" name="age" required placeholder="Введіть вік">
+            <input class="input2" type="text" [(ngModel)]="formData.sex" name="gender" required placeholder="Введіть стать">
+            <input class="input3" type="text" [(ngModel)]="formData.chestPainType" name="chestPainType" required placeholder="Введіть ChestPainType">
+            <input class="input4" type="text" [(ngModel)]="formData.restingBP" name="restingBP" required placeholder="Введіть RestingBP">
+            <input class="input5" type="text" [(ngModel)]="formData.cholesterol" name="cholesterol" required placeholder="Введіть Cholesterol">
+            <input class="input6" type="text" [(ngModel)]="formData.fastingBS" name="fastingBS" required placeholder="Введіть FastingBS">
+            <input class="input7" type="text" [(ngModel)]="formData.restingECG" name="restingECG" required placeholder="Введіть RestingECG">
+            <input class="input8" type="text" [(ngModel)]="formData.maxHR" name="maxHR" required placeholder="Введіть MaxHR">
+            <input class="input9" type="text" [(ngModel)]="formData.exerciseAngina" name="exerciseAngina" required placeholder="Введіть ExerciseAngina">
+            <input class="input10" type="text" [(ngModel)]="formData.oldpeak" name="oldpeak" required placeholder="Введіть Oldpeak">
+            <button type="submit" class="main-page-button">Надіслати</button>
         </form>
-          
     </main>
+
+    <!-- Modal Template -->
+    <ng-template #modalTemplate>
+        <div class="modal-content">
+            <div class="modal-text">ВИ ЖИВІ!</div>
+            <img src="/assets/images/mc_petya.jpg" alt="mc_petya" class="modal-image">
+        </div>
+    </ng-template>
 </body>
-
-<router-outlet></router-outlet>
-
-<ng-template #modalTemplate>
-    <div class="modal-content">
-        <div class="modal-text">ВИ ЖИВІ!</div>
-        <img src="/assets/images/mc_petya.jpg" alt="mc_petya" class="modal-image">
-    </div>
-</ng-template>
