@@ -1,6 +1,6 @@
-import { Component, TemplateRef } from '@angular/core';
-import { FormsModule } from '@angular/forms';  
-import { HttpClientModule } from '@angular/common/http'; 
+import { Component, TemplateRef, ChangeDetectorRef  } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 import { ModalService } from './modal/services/modal.service';
 
@@ -11,7 +11,7 @@ interface HeartDiseaseResponse {
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [FormsModule, HttpClientModule],  
+  imports: [FormsModule, HttpClientModule],
   providers: [ModalService],
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.css']
@@ -32,7 +32,8 @@ export class MainPageComponent {
 
   constructor(
     private modalService: ModalService,
-    private http: HttpClient 
+    private http: HttpClient,
+    private cdr: ChangeDetectorRef
   ) {}
 
   openModal(modalTemplate: TemplateRef<any>) {
@@ -43,9 +44,9 @@ export class MainPageComponent {
       });
   }
 
-  onSubmit(modalTemplate: TemplateRef<any>) {
+  onSubmit(modalTemplate: TemplateRef<any>, modalTemplate1: TemplateRef<any>) {
     const transformedData = {
-      age: Number(this.formData.age), 
+      age: Number(this.formData.age),
       sex: Number(this.formData.sex) == 1 ? true : false,
       chestPainType: Number(this.formData.chestPainType),
       restingBP: Number(this.formData.restingBP),
@@ -53,7 +54,7 @@ export class MainPageComponent {
       fastingBS: Number(this.formData.fastingBS),
       restingECG: Number(this.formData.restingECG),
       maxHR: Number(this.formData.maxHR),
-      exerciseAngina: Number(this.formData.exerciseAngina) == 1 ? true : false, 
+      exerciseAngina: Number(this.formData.exerciseAngina) == 1 ? true : false,
       oldpeak: Number(this.formData.oldpeak)
     };
 
@@ -61,12 +62,31 @@ export class MainPageComponent {
       .subscribe(
         (response) => {
           if (response.prediction && response.prediction[0] === 0) {
-            this.openModal(modalTemplate); 
+            this.openModal(modalTemplate);
+          } else{
+            this.openModal(modalTemplate1);
           }
         },
         (error) => {
           console.error('Помилка при відправці:', error);
         }
       );
+
+
+
+    // Фейкова відповідь для тестування
+    // const fakeResponse = { prediction: [Math.round(Math.random())] };
+    // this.showPredictionModal(fakeResponse.prediction[0], modalTemplate, modalTemplate1);
+
   }
-}
+
+  // showPredictionModal(prediction: number, modalTemplate: TemplateRef<any>, modalTemplate1: TemplateRef<any>) {
+  //   if (prediction === 0) {
+  //     this.openModal(modalTemplate);
+  //   } else {
+  //     this.openModal(modalTemplate1);
+  //   }
+  // }
+
+
+  }
