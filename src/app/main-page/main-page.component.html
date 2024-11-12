@@ -1,6 +1,6 @@
 <body>
     <main>
-        <form (ngSubmit)="onSubmit(modalTemplate)">
+        <form (ngSubmit)="onSubmit(modalTemplate, modalTemplate1)">
             <input class="input1" type="text" [(ngModel)]="formData.age" name="age" required placeholder="Введіть вік">
             <input class="input2" type="text" [(ngModel)]="formData.sex" name="gender" required placeholder="Введіть стать">
             <input class="input3" type="text" [(ngModel)]="formData.chestPainType" name="chestPainType" required placeholder="Введіть ChestPainType">
@@ -20,6 +20,14 @@
         <div class="modal-content">
             <div class="modal-text">ВИ ЖИВІ!</div>
             <img src="/assets/images/mc_petya.jpg" alt="mc_petya" class="modal-image">
+        </div>
+    </ng-template>
+
+    <!-- Modal Template for Prediction 1 -->
+    <ng-template #modalTemplate1>
+        <div class="modal-content">
+            <div class="modal-text">ПОТРІБНА ДОПОМОГА!</div>
+            <img src="/assets/images/sick_cats.jpg" alt="help_image" class="modal-image">
         </div>
     </ng-template>
 </body>
