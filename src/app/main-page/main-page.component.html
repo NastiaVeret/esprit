@@ -2,32 +2,50 @@
     <main>
         <form (ngSubmit)="onSubmit(modalTemplate, modalTemplate1)">
             <input class="input1" type="text" [(ngModel)]="formData.age" name="age" required placeholder="Введіть вік">
-            <input class="input2" type="text" [(ngModel)]="formData.sex" name="gender" required placeholder="Введіть стать">
-            <input class="input3" type="text" [(ngModel)]="formData.chestPainType" name="chestPainType" required placeholder="Введіть ChestPainType">
+            <select class="input2" [(ngModel)]="formData.sex" name="sex" required placeholder="Стать">
+                <option [value]="false">Жінка</option>
+                <option [value]="true">Чоловік</option>
+            </select>
+
+            <select class="input3" [(ngModel)]="formData.chestPainType" name="chestPainType" required>
+                <option [value]="1">Типова стенокардія, тобто біль у грудях, пов'язаний із серцем</option>
+                <option [value]="2">Атипова стенокардія, тобто біль у грудях, не пов'язаний з серцем</option>
+                <option [value]="3">Неангінальний біль, який зазвичай є гострим і непостійним</option>
+                <option [value]="4">Безсимптомний, тобто людина не відчуває жодних симптомів</option>
+            </select>
             <input class="input4" type="text" [(ngModel)]="formData.restingBP" name="restingBP" required placeholder="Введіть RestingBP">
             <input class="input5" type="text" [(ngModel)]="formData.cholesterol" name="cholesterol" required placeholder="Введіть Cholesterol">
-            <input class="input6" type="text" [(ngModel)]="formData.fastingBS" name="fastingBS" required placeholder="Введіть FastingBS">
+            <select class="input6" [(ngModel)]="formData.fastingBS" name="fastingBS" required placeholder="FastingBS">
+                <option [value]="0">Цукор в крові перевищує 120 мг/дл</option>
+                <option [value]="1">Цукор в крові не перевищує 120 мг/дл</option>
+            </select>
             <input class="input7" type="text" [(ngModel)]="formData.restingECG" name="restingECG" required placeholder="Введіть RestingECG">
-            <input class="input8" type="text" [(ngModel)]="formData.maxHR" name="maxHR" required placeholder="Введіть MaxHR">
-            <input class="input9" type="text" [(ngModel)]="formData.exerciseAngina" name="exerciseAngina" required placeholder="Введіть ExerciseAngina">
-            <input class="input10" type="text" [(ngModel)]="formData.oldpeak" name="oldpeak" required placeholder="Введіть Oldpeak">
-            <button type="submit" class="main-page-button">Надіслати</button>
+            <select class="input6" [(ngModel)]="formData.sex" name="sex" required placeholder="RestingECG">
+                <option [value]="0 ">Цукор в крові перевищує 120 мг/дл</option>
+                <option [value]="1 ">Цукор в крові не перевищує 120 мг/дл</option>
+                <option [value]="2 ">Цукор в крові не перевищує 120 мг/дл</option>
+            </select>
+            <input class="input8 " type="text " [(ngModel)]="formData.maxHR " name="maxHR " required placeholder="Введіть MaxHR ">
+            <input class="input9 " type="text " [(ngModel)]="formData.exerciseAngina " name="exerciseAngina " required placeholder="Введіть ExerciseAngina ">
+            <input class="input10 " type="text " [(ngModel)]="formData.oldpeak " name="oldpeak " required placeholder="Введіть Oldpeak ">
+
+            <button type="submit " class="main-page-button ">Надіслати</button>
         </form>
     </main>
 
-    <!-- Modal Template -->
+    <!-- Модальне вікно для Prediction 0 -->
     <ng-template #modalTemplate>
-        <div class="modal-content">
-            <div class="modal-text">ВИ ЖИВІ!</div>
-            <img src="/assets/images/mc_petya.jpg" alt="mc_petya" class="modal-image">
+        <div class="modal-content ">
+            <div class="modal-text ">ВИ ЖИВІ!</div>
+            <img src="/assets/images/mc_petya.jpg " alt="mc_petya " class="modal-image ">
         </div>
     </ng-template>
 
-    <!-- Modal Template for Prediction 1 -->
+    <!-- Модальне вікно для Prediction 1 -->
     <ng-template #modalTemplate1>
-        <div class="modal-content">
-            <div class="modal-text">ПОТРІБНА ДОПОМОГА!</div>
-            <img src="/assets/images/sick_cats.jpg" alt="help_image" class="modal-image">
+        <div class="modal-content ">
+            <div class="modal-text ">ПОТРІБНА ДОПОМОГА!</div>
+            <img src="/assets/images/sick_cats.jpg " alt="help_image " class="modal-image ">
         </div>
     </ng-template>
 </body>
