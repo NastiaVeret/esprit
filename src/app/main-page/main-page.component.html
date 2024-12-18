@@ -1,19 +1,91 @@
 <body>
-    <main>
-        <form (ngSubmit)="onSubmit(modalTemplate, modalTemplate1)">
+  <main>
+    <form (ngSubmit)="onSubmit(modalTemplate, modalTemplate1)">
+        <div class="input-container">
             <input class="input1" type="text" [(ngModel)]="formData.age" name="age" required placeholder="Введіть вік">
+        </div>
+        <div class="input-container">
             <input class="input2" type="text" [(ngModel)]="formData.sex" name="gender" required placeholder="Введіть стать">
+        </div>
+        <div class="input-container">
             <input class="input3" type="text" [(ngModel)]="formData.chestPainType" name="chestPainType" required placeholder="Введіть ChestPainType">
-            <input class="input4" type="text" [(ngModel)]="formData.restingBP" name="restingBP" required placeholder="Введіть RestingBP">
+        </div>
+        <div class="input-container">
+          <input class="input4" type="text" [(ngModel)]="formData.restingBP" name="restingBP" required placeholder="Введіть RestingBP">
+          <div class="rectangle4">
+              <span class="info">і</span>
+          </div>
+          <div class="tooltip_restingBP">
+              <p>Введіть артеріальний тиск, коли ви перебуваєте у стані спокою (в мм рт. ст.).
+              <br> <a href="https://youtu.be/uOFf_6pQe_A?si=_A0A0q8GpcP7IDz6" target="_blank">Подивитись як вимірюють тиск тут</a></p>
+          </div>
+      </div>
+
+        <div class="input-container">
             <input class="input5" type="text" [(ngModel)]="formData.cholesterol" name="cholesterol" required placeholder="Введіть Cholesterol">
+            <div class="rectangle5">
+              <span class="info" id="info">i</span>
+            </div>
+            <div class="tooltip_cholesterol">
+              <p>Вкажіть рівень холестерину в крові в мг/дл(міліграмах на децилітр).
+              <br> <a href="https://empendium.com/ua/kalkulatory/303841,hlyukoza" target="_blank">Перевести значення ммоль/л в мг/дл </a></p>
+            </div>
+        </div>
+
+        <div class="input-container">
             <input class="input6" type="text" [(ngModel)]="formData.fastingBS" name="fastingBS" required placeholder="Введіть FastingBS">
+            <div class="rectangle6">
+              <span class="info" id="info">i</span>
+            </div>
+            <div class="tooltip_fastingBS">
+              <p>Вкажіть 1, якщо рівень цукру в крові натще перевищує 120 мг/дл, в іншому випадку - 0.
+              <!-- <br> <a href="https://youtu.be/uOFf_6pQe_A?si=_A0A0q8GpcP7IDz6" target="_blank">Подивитись як вимірюють тиск </a></p> -->
+            </div>
+        </div>
+        <div class="input-container">
             <input class="input7" type="text" [(ngModel)]="formData.restingECG" name="restingECG" required placeholder="Введіть RestingECG">
+            <div class="rectangle7">
+              <span class="info" id="info">i</span>
+            </div>
+            <div class="tooltip_restingECG">
+              <p>Результат електрокардіограми (ЕКГ) у стані спокою для виявлення ознак серцевих проблем.
+              <!-- <br> <a href="https://youtu.be/uOFf_6pQe_A?si=_A0A0q8GpcP7IDz6" target="_blank">Подивитись як вимірюють тиск </a></p> -->
+            </div>
+        </div>
+        <div class="input-container">
             <input class="input8" type="text" [(ngModel)]="formData.maxHR" name="maxHR" required placeholder="Введіть MaxHR">
+            <div class="rectangle8">
+              <span class="info" id="info">i</span>
+            </div>
+            <div class="tooltip_maxHR">
+              <p>Вкажіть максимальну частоту серцевих скорочень, якої ви досягали.
+              <br> <a href="https://youtu.be/tkdcRN_Kg00?si=AtTHPMYzan6XQat-" target="_blank">Як вимірювати число серцевих скорочень? </a></p>
+            </div>
+        </div>
+        <div class="input-container">
             <input class="input9" type="text" [(ngModel)]="formData.exerciseAngina" name="exerciseAngina" required placeholder="Введіть ExerciseAngina">
+            <div class="rectangle9">
+              <span class="info" id="info">i</span>
+            </div>
+            <div class="exerciseAngina">
+              <p>Якщо під час  фізичних навантажень ви відчуваєте стенокардію (біль у грудях), виберіть 1, в іншому випадку - 0.
+            </div>
+        </div>
+        <div class="input-container">
             <input class="input10" type="text" [(ngModel)]="formData.oldpeak" name="oldpeak" required placeholder="Введіть Oldpeak">
-            <button type="submit" class="main-page-button">Надіслати</button>
-        </form>
-    </main>
+            <div class="rectangle10">
+              <span class="info" id="info">i</span>
+            </div>
+            <div class="oldpeak">
+              <p>Це медичний показник, який визначається за допомогою електрокардіографії (ЕКГ) під час фізичного навантаження (стрес-тесту).
+              <!-- <br> <a href="https://youtu.be/uOFf_6pQe_A?si=_A0A0q8GpcP7IDz6" target="_blank">Подивитись як вимірюють тиск </a></p> -->
+            </div>
+        </div>
+        <button type="submit" class="main-page-button">Надіслати</button>
+        <div class="rectangle rectangle-button"></div>
+    </form>
+  </main>
+
 
     <!-- Modal Template -->
     <ng-template #modalTemplate>
@@ -30,4 +102,7 @@
             <img src="/assets/images/sick_cats.jpg" alt="help_image" class="modal-image">
         </div>
     </ng-template>
+
+
+
 </body>

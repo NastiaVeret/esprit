@@ -74,6 +74,7 @@ export class MainPageComponent {
 
 
 
+
     // Фейкова відповідь для тестування
     // const fakeResponse = { prediction: [Math.round(Math.random())] };
     // this.showPredictionModal(fakeResponse.prediction[0], modalTemplate, modalTemplate1);
