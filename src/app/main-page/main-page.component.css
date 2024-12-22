@@ -1,1572 +1,1824 @@
 body {
-  background-color: #d1c4e9;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+    background-color: #d1c4e9;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .main-page-button {
-  margin-top: 20px;
-  padding: 25px 150px;
-  font-size: 30px;
-  background-color: #040109;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border: 2px solid #040109;
-  top: 480px;
-  position: absolute;
-  right: 250px;
-  color: rgba(255, 255, 255, 0.763);
+    margin-top: 20px;
+    padding: 25px 150px;
+    font-size: 30px;
+    background-color: #040109;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 2px solid #040109;
+    top: 480px;
+    position: absolute;
+    right: 250px;
+    color: rgba(255, 255, 255, 0.763);
 }
 
 .input1 {
-  font-size: 20px;
-  top: 80px;
-  left: 100px;
-  padding: 18px 150px;
-  border-radius: 20px;
-  position: relative;
-  z-index: 1;
-}
-.rectangle1 {
-width: 100px;
-height: 55px;
-background-color: black;
-position: relative;
-bottom: -5px;
-margin-top: 80px;
-left: 560px;
-border-radius: 20px;
-transition: left 0.3s ease;
-}
-.input1:hover ~ .rectangle1 {
-transform: translateX(30px);
-}
-.rectangle1:hover {
-transform: translateX(50px);
+    font-size: 20px;
+    top: 80px;
+    left: 100px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
 }
 
+.rectangle1 {
+    width: 100px;
+    height: 55px;
+    background-color: black;
+    position: relative;
+    bottom: -5px;
+    margin-top: 80px;
+    left: 560px;
+    border-radius: 20px;
+    transition: left 0.3s ease;
+}
+
+.input1:hover~.rectangle1 {
+    transform: translateX(30px);
+}
+
+.rectangle1:hover {
+    transform: translateX(50px);
+}
+
+.rectangle1::after {
+    content: 'і';
+    font-style: italic;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.input1:hover~.rectangle1::after {
+    opacity: 1;
+}
+
+.rectangle1:hover::after {
+    opacity: 1;
+}
+
+.rectangle1:hover+.tooltip_age,
+.rectangle1 .info:hover+.tooltip_age,
+.tooltip_age:hover {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(10px);
+}
+
+.tooltip_age {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 160px;
+    left: 740px;
+    width: 280px;
+    padding: 12px 16px;
+    background: #333;
+    color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 10;
+    font-family: Arial, sans-serif;
+}
+
+.tooltip_age p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.rectangle1:hover+.tooltip_age,
+.tooltip_age:hover {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .input2 {
-  font-size: 20px;
-  top: 160px;
-  left: 100px;
-  padding: 18px 150px;
-  border-radius: 20px;
-  position: relative;
-  z-index: 1;
+    font-size: 20px;
+    top: 160px;
+    left: 100px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    width: 554px;
+    border: 2px solid black;
 }
+
 .rectangle2 {
-width: 100px;
-height: 55px;
-background-color: black;
-position: relative;
-bottom: -5px;
-margin-top: 160px;
-left: 560px;
-border-radius: 20px;
+    width: 100px;
+    height: 55px;
+    background-color: black;
+    position: relative;
+    bottom: -5px;
+    margin-top: 100px;
+    left: 560px;
+    border-radius: 20px;
 }
-.input2:hover ~ .rectangle2 {
-transform: translateX(30px);
+
+.input2:hover~.rectangle2 {
+    transform: translateX(30px);
 }
+
 .rectangle2:hover {
-transform: translateX(50px);
+    transform: translateX(50px);
+}
+
+.rectangle2::after {
+    content: 'і';
+    font-style: italic;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.input2:hover~.rectangle2::after {
+    opacity: 1;
+}
+
+.rectangle2:hover::after {
+    opacity: 1;
+}
+
+.rectangle2:hover+.tooltip_sex,
+.rectangle2 .info:hover+.tooltip_sex,
+.tooltip_sex:hover {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(10px);
+}
+
+.tooltip_sex {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 160px;
+    left: 740px;
+    width: 280px;
+    padding: 12px 16px;
+    background: #333;
+    color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 10;
+    font-family: Arial, sans-serif;
+}
+
+.tooltip_sex p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.rectangle2:hover+.tooltip_sex,
+.tooltip_sex:hover {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .input3 {
-  font-size: 20px;
-  top: 240px;
-  left: 100px;
-  padding: 18px 150px;
-  border-radius: 20px;
-  position: absolute;
+    font-size: 20px;
+    top: 240px;
+    left: 100px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: absolute;
+    width: 554px;
+    background-color: white;
+    z-index: 2;
+    border: 2px solid black;
 }
 
 .rectangle3 {
-width: 100px;
-height: 55px;
-background-color: black;
-position: relative;
-bottom: -5px;
-margin-top: 240px;
-left: 560px;
-border-radius: 20px;
+    width: 100px;
+    height: 55px;
+    background-color: black;
+    position: relative;
+    bottom: -5px;
+    margin-top: 240px;
+    left: 560px;
+    border-radius: 20px;
 }
 
-.input3:hover ~ .rectangle3 {
-transform: translateX(30px);
+.input3:hover~.rectangle3 {
+    transform: translateX(30px);
 }
+
 .rectangle3:hover {
-transform: translateX(50px);
+    transform: translateX(50px);
+}
+
+.rectangle3::after {
+    content: 'і';
+    font-style: italic;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.input3:hover~.rectangle3::after {
+    opacity: 1;
+}
+
+.rectangle3:hover::after {
+    opacity: 1;
+}
+
+.rectangle3:hover+.tooltip_chestPainType,
+.rectangle3 .info:hover+.tooltip_chestPainType,
+.tooltip_chestPainType:hover {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(10px);
+}
+
+.tooltip_chestPainType {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 300px;
+    left: 740px;
+    width: 280px;
+    padding: 12px 16px;
+    background: #333;
+    color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 10;
+    font-family: Arial, sans-serif;
+}
+
+.tooltip_chestPainType p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.tooltip_chestPainType a {
+    color: #4da6ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tooltip_chestPainType a:hover {
+    text-decoration: underline;
+    color: #62b6ff;
+}
+
+.rectangle3:hover+.tooltip_chestPainType,
+.tooltip_chestPainType:hover {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .input4 {
-  font-size: 20px;
-  top: 320px;
-  left: 100px;
-  padding: 18px 150px;
-  border-radius: 20px;
-  position: absolute;
+    font-size: 20px;
+    top: 320px;
+    left: 100px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: absolute;
 }
 
 .rectangle4 {
-width: 100px;
-height: 55px;
-background-color: black;
-position: relative;
-bottom: -5px;
-margin-top: 320px;
-left: 560px;
-border-radius: 20px;
+    width: 100px;
+    height: 55px;
+    background-color: black;
+    position: relative;
+    bottom: -5px;
+    margin-top: 320px;
+    left: 560px;
+    border-radius: 20px;
 }
-.input4:hover ~ .rectangle4 {
-transform: translateX(30px);
+
+.input4:hover~.rectangle4 {
+    transform: translateX(30px);
 }
+
 .rectangle4:hover {
-transform: translateX(50px);
+    transform: translateX(50px);
 }
 
 .rectangle4::after {
-  content: 'і';
-  font-style: italic;
-  font-size: 24px;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 70px;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.5s;
+    content: 'і';
+    font-style: italic;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
-.input4:hover ~ .rectangle4::after {
-  opacity: 1;
+.input4:hover~.rectangle4::after {
+    opacity: 1;
 }
+
 .rectangle4:hover::after {
-  opacity: 1;
-}
-.rectangle4:hover + .tooltip_restingBP,
-.rectangle4 .info:hover + .tooltip_restingBP,
-.tooltip_restingBP:hover {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(10px);
+    opacity: 1;
 }
 
+.rectangle4:hover+.tooltip_restingBP,
+.rectangle4 .info:hover+.tooltip_restingBP,
+.tooltip_restingBP:hover {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(10px);
+}
 
 .tooltip_restingBP {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: 300px;
-  left: 740px;
-  width: 280px;
-  padding: 12px 16px;
-  background: #333;
-  color: #f5f5f5;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transform: translateY(-10px);
-  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-  z-index: 10;
-  font-family: Arial, sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 300px;
+    left: 740px;
+    width: 280px;
+    padding: 12px 16px;
+    background: #333;
+    color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 10;
+    font-family: Arial, sans-serif;
 }
 
 .tooltip_restingBP p {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.5;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 .tooltip_restingBP a {
-  color: #4da6ff;
-  text-decoration: none;
-  font-weight: bold;
+    color: #4da6ff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .tooltip_restingBP a:hover {
-  text-decoration: underline;
-  color: #62b6ff;
+    text-decoration: underline;
+    color: #62b6ff;
 }
 
-.rectangle4:hover + .tooltip_restingBP,
+.rectangle4:hover+.tooltip_restingBP,
 .tooltip_restingBP:hover {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
-
-
 
 .input5 {
-  font-size: 20px;
-  top: 400px;
-  left: 100px;
-  padding: 18px 150px;
-  border-radius: 20px;
-  position: absolute;
+    font-size: 20px;
+    top: 400px;
+    left: 100px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: absolute;
 }
 
 .rectangle5 {
-width: 100px;
-height: 55px;
-background-color: black;
-position: relative;
-bottom: -5px;
-margin-top: 400px;
-left: 560px;
-border-radius: 20px;
+    width: 100px;
+    height: 55px;
+    background-color: black;
+    position: relative;
+    bottom: -5px;
+    margin-top: 400px;
+    left: 560px;
+    border-radius: 20px;
 }
-.input5:hover ~ .rectangle5 {
-transform: translateX(30px);
+
+.input5:hover~.rectangle5 {
+    transform: translateX(30px);
 }
+
 .rectangle5:hover {
-transform: translateX(50px);
+    transform: translateX(50px);
 }
 
 .rectangle5::after {
-  content: 'і';
-  font-style: italic;
-  font-size: 24px;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 70px;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.5s;
+    content: 'і';
+    font-style: italic;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
-.input5:hover ~ .rectangle5::after {
-  opacity: 1;
+.input5:hover~.rectangle5::after {
+    opacity: 1;
 }
+
 .rectangle5:hover::after {
-  opacity: 1;
+    opacity: 1;
 }
 
-
-.rectangle5:hover + .tooltip_cholesterol,
-.rectangle5 .info:hover + .tooltip_cholesterol,
+.rectangle5:hover+.tooltip_cholesterol,
+.rectangle5 .info:hover+.tooltip_cholesterol,
 .tooltip_cholesterol:hover {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(10px);
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(10px);
 }
 
 .tooltip_cholesterol {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: 370px;
-  left: 740px;
-  width: 280px;
-  padding: 12px 16px;
-  background: #333;
-  color: #f5f5f5;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transform: translateY(-10px);
-  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-  z-index: 10;
-  font-family: Arial, sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 370px;
+    left: 740px;
+    width: 280px;
+    padding: 12px 16px;
+    background: #333;
+    color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 10;
+    font-family: Arial, sans-serif;
 }
 
 .tooltip_cholesterol p {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.5;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 .tooltip_cholesterol a {
-  color: #4da6ff;
-  text-decoration: none;
-  font-weight: bold;
+    color: #4da6ff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .tooltip_cholesterol a:hover {
-  text-decoration: underline;
-  color: #62b6ff;
+    text-decoration: underline;
+    color: #62b6ff;
 }
 
-.rectangle5:hover + .tooltip_cholesterol,
+.rectangle5:hover+.tooltip_cholesterol,
 .tooltip_cholesterol:hover {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
-
-
 
 .input6 {
-font-size: 20px;
-top: 80px;
-left: 800px;
-padding: 18px 150px;
-border-radius: 20px;
-position: relative;
-z-index: 1;
-}
-.rectangle6 {
-width: 100px;
-height: 55px;
-background-color: black;
-position: relative;
-bottom: -5px;
-margin-top: 80px;
-left: 1260px;
-border-radius: 20px;
-}
-.input6:hover ~ .rectangle6 {
-transform: translateX(30px);
-}
-.rectangle6:hover {
-transform: translateX(50px);
+    font-size: 20px;
+    top: 80px;
+    left: 800px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    width: 554px;
+    border: 2px solid black;
 }
 
+.rectangle6 {
+    width: 100px;
+    height: 55px;
+    background-color: black;
+    position: relative;
+    bottom: -5px;
+    top: 24px;
+    left: 1260px;
+    border-radius: 20px;
+}
+
+.input6:hover~.rectangle6 {
+    transform: translateX(30px);
+}
+
+.rectangle6:hover {
+    transform: translateX(50px);
+}
 
 .rectangle6::after {
-  content: 'і';
-  font-style: italic;
-  font-size: 24px;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 70px;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.5s;
+    content: 'і';
+    font-style: italic;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
-.input6:hover ~ .rectangle6::after {
-  opacity: 1;
+.input6:hover~.rectangle6::after {
+    opacity: 1;
 }
+
 .rectangle6:hover::after {
-  opacity: 1;
+    opacity: 1;
 }
 
-
-.rectangle6:hover + .tooltip_fastingBS,
-.rectangle6 .info:hover + .tooltip_fastingBS,
+.rectangle6:hover+.tooltip_fastingBS,
+.rectangle6 .info:hover+.tooltip_fastingBS,
 .tooltip_fastingBS:hover {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(10px);
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(10px);
 }
 
 .tooltip_fastingBS {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: 150px;
-  left: 1050px;
-  width: 280px;
-  padding: 12px 16px;
-  background: #333;
-  color: #f5f5f5;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transform: translateY(-10px);
-  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-  z-index: 10;
-  font-family: Arial, sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 150px;
+    left: 1050px;
+    width: 280px;
+    padding: 12px 16px;
+    background: #333;
+    color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 10;
+    font-family: Arial, sans-serif;
 }
 
 .tooltip_fastingBS p {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.5;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 .tooltip_fastingBS a {
-  color: #4da6ff;
-  text-decoration: none;
-  font-weight: bold;
+    color: #4da6ff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .tooltip_fastingBS a:hover {
-  text-decoration: underline;
-  color: #62b6ff;
+    text-decoration: underline;
+    color: #62b6ff;
 }
 
-.rectangle6:hover + .tooltip_fastingBS,
+.rectangle6:hover+.tooltip_fastingBS,
 .tooltip_fastingBS:hover {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
-
-
 
 .input7 {
-  font-size: 20px;
-  top: 160px;
-  left: 800px;
-  padding: 18px 150px;
-  border-radius: 20px;
-  position: absolute;
+    font-size: 20px;
+    top: 160px;
+    left: 800px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: absolute;
 }
+
 .rectangle7 {
-width: 100px;
-height: 55px;
-background-color: black;
-position: relative;
-bottom: -5px;
-margin-top: 160px;
-left: 1260px;
-border-radius: 20px;
+    width: 100px;
+    height: 55px;
+    background-color: black;
+    position: relative;
+    bottom: -5px;
+    margin-top: 160px;
+    left: 1260px;
+    border-radius: 20px;
 }
-.input7:hover ~ .rectangle7 {
-transform: translateX(30px);
+
+.input7:hover~.rectangle7 {
+    transform: translateX(30px);
 }
+
 .rectangle7:hover {
-transform: translateX(50px);
+    transform: translateX(50px);
 }
 
 .rectangle7::after {
-  content: 'і';
-  font-style: italic;
-  font-size: 24px;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 70px;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.5s;
+    content: 'і';
+    font-style: italic;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
-.input7:hover ~ .rectangle7::after {
-  opacity: 1;
+.input7:hover~.rectangle7::after {
+    opacity: 1;
 }
+
 .rectangle7:hover::after {
-  opacity: 1;
+    opacity: 1;
 }
 
-.rectangle7:hover + .tooltip_restingECG,
-.rectangle7 .info:hover + .tooltip_restingECG,
+.rectangle7:hover+.tooltip_restingECG,
+.rectangle7 .info:hover+.tooltip_restingECG,
 .tooltip_restingECG:hover {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(10px);
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(10px);
 }
 
 .tooltip_restingECG {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: 230px;
-  left: 1050px;
-  width: 280px;
-  padding: 12px 16px;
-  background: #333;
-  color: #f5f5f5;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transform: translateY(-10px);
-  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-  z-index: 10;
-  font-family: Arial, sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 230px;
+    left: 1050px;
+    width: 280px;
+    padding: 12px 16px;
+    background: #333;
+    color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 10;
+    font-family: Arial, sans-serif;
 }
 
 .tooltip_restingECG p {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.5;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 .tooltip_restingECG a {
-  color: #4da6ff;
-  text-decoration: none;
-  font-weight: bold;
+    color: #4da6ff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .tooltip_restingECG a:hover {
-  text-decoration: underline;
-  color: #62b6ff;
+    text-decoration: underline;
+    color: #62b6ff;
 }
 
-.rectangle7:hover + .tooltip_restingECG,
+.rectangle7:hover+.tooltip_restingECG,
 .tooltip_restingECG:hover {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
-
 
 .input8 {
-  font-size: 20px;
-  top: 240px;
-  left: 800px;
-  padding: 18px 150px;
-  border-radius: 20px;
-  position: absolute;
+    font-size: 20px;
+    top: 240px;
+    left: 800px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: absolute;
 }
 
 .rectangle8 {
-width: 100px;
-height: 55px;
-background-color: black;
-position: relative;
-bottom: -5px;
-top: 244px;
-left: 1260px;
-border-radius: 20px;
-}
-.input8:hover ~ .rectangle8 {
-transform: translateX(30px);
-}
-.rectangle8:hover {
-transform: translateX(50px);
+    width: 100px;
+    height: 55px;
+    background-color: black;
+    position: relative;
+    bottom: -5px;
+    top: 244px;
+    left: 1260px;
+    border-radius: 20px;
 }
 
+.input8:hover~.rectangle8 {
+    transform: translateX(30px);
+}
+
+.rectangle8:hover {
+    transform: translateX(50px);
+}
 
 .rectangle8::after {
-  content: 'і';
-  font-style: italic;
-  font-size: 24px;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 70px;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.5s;
+    content: 'і';
+    font-style: italic;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
-.input8:hover ~ .rectangle8::after {
-  opacity: 1;
+.input8:hover~.rectangle8::after {
+    opacity: 1;
 }
+
 .rectangle8:hover::after {
-  opacity: 1;
+    opacity: 1;
 }
 
-.rectangle8:hover + .tooltip_maxHR,
-.rectangle8 .info:hover + .tooltip_maxHR,
+.rectangle8:hover+.tooltip_maxHR,
+.rectangle8 .info:hover+.tooltip_maxHR,
 .tooltip_maxHR:hover {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(10px);
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(10px);
 }
 
 .tooltip_maxHR {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: 310px;
-  left: 1050px;
-  width: 280px;
-  padding: 12px 16px;
-  background: #333;
-  color: #f5f5f5;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transform: translateY(-10px);
-  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-  z-index: 10;
-  font-family: Arial, sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 310px;
+    left: 1050px;
+    width: 280px;
+    padding: 12px 16px;
+    background: #333;
+    color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 10;
+    font-family: Arial, sans-serif;
 }
 
 .tooltip_maxHR p {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.5;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 .tooltip_maxHR a {
-  color: #4da6ff;
-  text-decoration: none;
-  font-weight: bold;
+    color: #4da6ff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .tooltip_maxHR a:hover {
-  text-decoration: underline;
-  color: #62b6ff;
+    text-decoration: underline;
+    color: #62b6ff;
 }
 
-.rectangle8:hover + .tooltip_maxHR,
+.rectangle8:hover+.tooltip_maxHR,
 .tooltip_maxHR:hover {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .input9 {
-  font-size: 20px;
-  top: 320px;
-  left: 800px;
-  padding: 18px 150px;
-  border-radius: 20px;
-  position: absolute;
+    font-size: 20px;
+    top: 320px;
+    left: 800px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: absolute;
+    width: 554px;
+    z-index: 2;
+    border: 2px solid black;
 }
 
 .rectangle9 {
-width: 100px;
-height: 55px;
-background-color: black;
-position: relative;
-bottom: -5px;
-top: 324px;
-left: 1260px;
-border-radius: 20px;
+    width: 100px;
+    height: 55px;
+    background-color: black;
+    position: relative;
+    bottom: -5px;
+    top: 324px;
+    left: 1260px;
+    border-radius: 20px;
 }
-.input9:hover ~ .rectangle9 {
-transform: translateX(30px);
+
+.input9:hover~.rectangle9 {
+    transform: translateX(30px);
 }
+
 .rectangle9:hover {
-transform: translateX(50px);
+    transform: translateX(50px);
 }
 
 .rectangle9::after {
-  content: 'і';
-  font-style: italic;
-  font-size: 24px;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 70px;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.5s;
+    content: 'і';
+    font-style: italic;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
-.input9:hover ~ .rectangle9::after {
-  opacity: 1;
+.input9:hover~.rectangle9::after {
+    opacity: 1;
 }
+
 .rectangle9:hover::after {
-  opacity: 1;
+    opacity: 1;
 }
 
-.rectangle9:hover + .exerciseAngina,
-.rectangle9 .info:hover + .exerciseAngina,
+.rectangle9:hover+.exerciseAngina,
+.rectangle9 .info:hover+.exerciseAngina,
 .exerciseAngina:hover {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(10px);
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(10px);
 }
 
 .exerciseAngina {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: 390px;
-  left: 1050px;
-  width: 280px;
-  padding: 12px 16px;
-  background: #333;
-  color: #f5f5f5;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transform: translateY(-10px);
-  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-  z-index: 10;
-  font-family: Arial, sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 390px;
+    left: 1050px;
+    width: 280px;
+    padding: 12px 16px;
+    background: #333;
+    color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 10;
+    font-family: Arial, sans-serif;
 }
 
 .exerciseAngina p {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.5;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 .exerciseAngina a {
-  color: #4da6ff;
-  text-decoration: none;
-  font-weight: bold;
+    color: #4da6ff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .exerciseAngina a:hover {
-  text-decoration: underline;
-  color: #62b6ff;
+    text-decoration: underline;
+    color: #62b6ff;
 }
 
-.rectangle9:hover + .exerciseAngina,
+.rectangle9:hover+.exerciseAngina,
 .exerciseAngina:hover {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
 
+.input8::placeholder {
+    color: #6c757d;
+}
+
+.input9.placeholder {
+    color: #6c757d;
+}
+
+.input9:not(.placeholder) {
+    color: black;
+}
+
+.input6.placeholder {
+    color: #6c757d;
+}
+
+.input6:not(.placeholder) {
+    color: black;
+}
+
+.input2.placeholder {
+    color: #6c757d;
+}
+
+.input2:not(.placeholder) {
+    color: black;
+}
+
+.input3.placeholder {
+    color: #6c757d;
+}
+
+.input3:not(.placeholder) {
+    color: black;
+}
 
 .input10 {
-  font-size: 20px;
-  top: 400px;
-  left: 800px;
-  padding: 18px 150px;
-  border-radius: 20px;
-  position: absolute;
+    font-size: 20px;
+    top: 400px;
+    left: 800px;
+    padding: 18px 150px;
+    border-radius: 20px;
+    position: absolute;
 }
 
 .rectangle10 {
-width: 100px;
-height: 55px;
-background-color: black;
-position: relative;
-bottom: -5px;
-top: 400px;
-left: 800px;
-border-radius: 20px;
+    width: 100px;
+    height: 55px;
+    background-color: black;
+    position: relative;
+    bottom: -5px;
+    top: 400px;
+    left: 800px;
+    border-radius: 20px;
 }
 
 .rectangle10 {
-width: 100px;
-height: 55px;
-background-color: black;
-position: relative;
-bottom: -5px;
-top: 404px;
-left: 1260px;
-border-radius: 20px;
+    width: 100px;
+    height: 55px;
+    background-color: black;
+    position: relative;
+    bottom: -5px;
+    top: 404px;
+    left: 1260px;
+    border-radius: 20px;
 }
-.input10:hover ~ .rectangle10 {
-transform: translateX(30px);
+
+.input10:hover~.rectangle10 {
+    transform: translateX(30px);
 }
+
 .rectangle10:hover {
-transform: translateX(50px);
+    transform: translateX(50px);
 }
 
 .rectangle10::after {
-  content: 'і';
-  font-style: italic;
-  font-size: 24px;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 70px;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.5s;
+    content: 'і';
+    font-style: italic;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
-.input10:hover ~ .rectangle10::after {
-  opacity: 1;
+.input10:hover~.rectangle10::after {
+    opacity: 1;
 }
+
 .rectangle10:hover::after {
-  opacity: 1;
+    opacity: 1;
 }
 
-
-.rectangle10:hover + .oldpeak,
-.rectangle10 .info:hover + .oldpeak,
+.rectangle10:hover+.oldpeak,
+.rectangle10 .info:hover+.oldpeak,
 .oldpeak:hover {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(10px);
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(10px);
 }
 
 .oldpeak {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: 470px;
-  left: 1050px;
-  width: 280px;
-  padding: 12px 16px;
-  background: #333;
-  color: #f5f5f5;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transform: translateY(-10px);
-  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-  z-index: 10;
-  font-family: Arial, sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 470px;
+    left: 1050px;
+    width: 280px;
+    padding: 12px 16px;
+    background: #333;
+    color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 10;
+    font-family: Arial, sans-serif;
 }
 
 .oldpeak p {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.5;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 .oldpeak a {
-  color: #4da6ff;
-  text-decoration: none;
-  font-weight: bold;
+    color: #4da6ff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .oldpeak a:hover {
-  text-decoration: underline;
-  color: #62b6ff;
+    text-decoration: underline;
+    color: #62b6ff;
 }
 
-.rectangle10:hover + .oldpeak,
+.rectangle10:hover+.oldpeak,
 .oldpeak:hover {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
-
 
 @media (max-width: 1350px) {
-  .main-page-button {
-      margin-top: 20px;
-      padding: 25px 150px;
-      font-size: 30px;
-      background-color: #040109;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      border: 2px solid #040109;
-      top: 480px;
-      position: absolute;
-      right: 120px;
-      color: rgba(255, 255, 255, 0.763);
-  }
-  .input1 {
-      font-size: 20px;
-      top: 80px;
-      left: 100px;
-      padding: 18px 120px;
-      border-radius: 20px;
-      position: absolute;
-  }
-  .rectangle1 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    bottom: -5px;
-    margin-top: 80px;
-    left: 500px;
-    border-radius: 20px;
-
-  }
-  .input1:hover ~ .rectangle1 {
-    transform: translateX(30px);
-  }
-  .rectangle1:hover {
-    transform: translateX(50px);
-  }
-
-  .input2 {
-      font-size: 20px;
-      top: 160px;
-      left: 100px;
-      padding: 18px 120px;
-      border-radius: 20px;
-      position: absolute;
-  }
-  .rectangle2 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    bottom: -5px;
-    margin-top: 160px;
-    left: 500px;
-    border-radius: 20px;
-  }
-  .input3 {
-      font-size: 20px;
-      top: 240px;
-      left: 100px;
-      padding: 18px 120px;
-      border-radius: 20px;
-      position: absolute;
-  }
-  .rectangle3 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    bottom: -5px;
-    margin-top: 240px;
-    left: 500px;
-    border-radius: 20px;
-  }
-  .input4 {
-      font-size: 20px;
-      top: 320px;
-      left: 100px;
-      padding: 18px 120px;
-      border-radius: 20px;
-      position: absolute;
-  }
-  .rectangle4 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    bottom: -5px;
-    margin-top: 320px;
-    left: 500px;
-    border-radius: 20px;
-  }
-
-  .tooltip_restingBP {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 300px;
-    left: 670px;
-    width: 280px;
-    padding: 12px 16px;
-    background: #333;
-    color: #f5f5f5;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transform: translateY(-10px);
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-    z-index: 10;
-    font-family: Arial, sans-serif;
-  }
-  .input5 {
-      font-size: 20px;
-      top: 400px;
-      left: 100px;
-      padding: 18px 120px;
-      border-radius: 20px;
-      position: absolute;
-  }
-  .rectangle5 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    bottom: -5px;
-    margin-top: 400px;
-    left: 500px;
-    border-radius: 20px;
-  }
-
-  .tooltip_cholesterol {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 370px;
-    left: 660px;
-    width: 280px;
-    padding: 12px 16px;
-    background: #333;
-    color: #f5f5f5;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transform: translateY(-10px);
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-    z-index: 10;
-    font-family: Arial, sans-serif;
-  }
-
-  .input6 {
-      font-size: 20px;
-      top: 80px;
-      left: 700px;
-      padding: 18px 120px;
-      border-radius: 20px;
-      position: absolute;
-  }
-  .rectangle6 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    bottom: -5px;
-    margin-top: 80px;
-    left: 1100px;
-    border-radius: 20px;
-  }
-
-  .tooltip_fastingBS {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 150px;
-    left: 900px;
-    width: 280px;
-    padding: 12px 16px;
-    background: #333;
-    color: #f5f5f5;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transform: translateY(-10px);
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-    z-index: 10;
-    font-family: Arial, sans-serif;
-  }
-
-  .input7 {
-      font-size: 20px;
-      top: 160px;
-      left: 700px;
-      padding: 18px 120px;
-      border-radius: 20px;
-      position: absolute;
-  }
-  .rectangle7 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    bottom: -5px;
-    margin-top: 160px;
-    left: 1100px;
-    border-radius: 20px;
-  }
-
-  .tooltip_restingECG {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 230px;
-    left: 900px;
-    width: 280px;
-    padding: 12px 16px;
-    background: #333;
-    color: #f5f5f5;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transform: translateY(-10px);
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-    z-index: 10;
-    font-family: Arial, sans-serif;
-  }
-  .input8 {
-      font-size: 20px;
-      top: 240px;
-      left: 700px;
-      padding: 18px 120px;
-      border-radius: 20px;
-      position: absolute;
-  }
-
-  .rectangle8 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    margin-top: 1px;
-    left: 1100px;
-    border-radius: 20px;
-  }
-
-  .tooltip_maxHR {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 310px;
-    left: 890px;
-    width: 280px;
-    padding: 12px 16px;
-    background: #333;
-    color: #f5f5f5;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transform: translateY(-10px);
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-    z-index: 10;
-    font-family: Arial, sans-serif;
-  }
-
-  .input9 {
-      font-size: 20px;
-      top: 320px;
-      left: 700px;
-      padding: 18px 120px;
-      border-radius: 20px;
-      position: absolute;
-  }
-  .rectangle9 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    margin-top: -1px;
-    left: 1100px;
-    border-radius: 20px;
-  }
-
-
-  .exerciseAngina {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 390px;
-    left: 890px;
-    width: 280px;
-    padding: 12px 16px;
-    background: #333;
-    color: #f5f5f5;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transform: translateY(-10px);
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-    z-index: 10;
-    font-family: Arial, sans-serif;
-  }
-  .input10 {
-      font-size: 20px;
-      top: 400px;
-      left: 700px;
-      padding: 18px 120px;
-      border-radius: 20px;
-      position: absolute;
-  }
-
-  .rectangle10 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    bottom: -5px;
-    margin-top: 2px;
-    left: 1100px;
-    border-radius: 20px;
-  }
-
-  .oldpeak {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 480px;
-    left: 880px;
-    width: 280px;
-    padding: 12px 16px;
-    background: #333;
-    color: #f5f5f5;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transform: translateY(-10px);
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-    z-index: 10;
-    font-family: Arial, sans-serif;
-  }
-
-
+    .main-page-button {
+        margin-top: 20px;
+        padding: 25px 150px;
+        font-size: 30px;
+        background-color: #040109;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: 2px solid #040109;
+        top: 480px;
+        position: absolute;
+        right: 120px;
+        color: rgba(255, 255, 255, 0.763);
+    }
+    .input1 {
+        font-size: 20px;
+        top: 80px;
+        left: 100px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .rectangle1 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        bottom: -5px;
+        margin-top: 80px;
+        left: 500px;
+        border-radius: 20px;
+    }
+    .input1:hover~.rectangle1 {
+        transform: translateX(30px);
+    }
+    .rectangle1:hover {
+        transform: translateX(50px);
+    }
+    .input2 {
+        font-size: 20px;
+        top: 160px;
+        left: 100px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+        width: 500px;
+    }
+    .rectangle2 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        bottom: -5px;
+        margin-top: 160px;
+        left: 506px;
+        border-radius: 20px;
+    }
+    .input2:hover~.rectangle2 {
+        transform: translateX(30px);
+    }
+    .rectangle2:hover {
+        transform: translateX(50px);
+    }
+    .input3 {
+        font-size: 20px;
+        top: 240px;
+        left: 100px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+        width: 500px;
+    }
+    .rectangle3 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        bottom: -5px;
+        margin-top: 240px;
+        left: 506px;
+        border-radius: 20px;
+    }
+    .input4 {
+        font-size: 20px;
+        top: 320px;
+        left: 100px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .rectangle4 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        bottom: -5px;
+        margin-top: 320px;
+        left: 500px;
+        border-radius: 20px;
+    }
+    .tooltip_restingBP {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 300px;
+        left: 670px;
+        width: 280px;
+        padding: 12px 16px;
+        background: #333;
+        color: #f5f5f5;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: translateY(-10px);
+        transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+        z-index: 10;
+        font-family: Arial, sans-serif;
+    }
+    .input5 {
+        font-size: 20px;
+        top: 400px;
+        left: 100px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .rectangle5 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        bottom: -5px;
+        margin-top: 400px;
+        left: 500px;
+        border-radius: 20px;
+    }
+    .tooltip_cholesterol {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 370px;
+        left: 660px;
+        width: 280px;
+        padding: 12px 16px;
+        background: #333;
+        color: #f5f5f5;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: translateY(-10px);
+        transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+        z-index: 10;
+        font-family: Arial, sans-serif;
+    }
+    .input6 {
+        font-size: 20px;
+        top: 80px;
+        left: 700px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+        width: 500px;
+    }
+    .rectangle6 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        bottom: -5px;
+        margin-top: 61px;
+        left: 1105px;
+        border-radius: 20px;
+    }
+    .tooltip_fastingBS {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 150px;
+        left: 900px;
+        width: 280px;
+        padding: 12px 16px;
+        background: #333;
+        color: #f5f5f5;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: translateY(-10px);
+        transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+        z-index: 10;
+        font-family: Arial, sans-serif;
+    }
+    .input7 {
+        font-size: 20px;
+        top: 160px;
+        left: 700px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .rectangle7 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        bottom: -5px;
+        margin-top: 160px;
+        left: 1100px;
+        border-radius: 20px;
+    }
+    .tooltip_restingECG {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 230px;
+        left: 900px;
+        width: 280px;
+        padding: 12px 16px;
+        background: #333;
+        color: #f5f5f5;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: translateY(-10px);
+        transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+        z-index: 10;
+        font-family: Arial, sans-serif;
+    }
+    .input8 {
+        font-size: 20px;
+        top: 240px;
+        left: 700px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .rectangle8 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        margin-top: 1px;
+        left: 1100px;
+        border-radius: 20px;
+    }
+    .tooltip_maxHR {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 310px;
+        left: 890px;
+        width: 280px;
+        padding: 12px 16px;
+        background: #333;
+        color: #f5f5f5;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: translateY(-10px);
+        transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+        z-index: 10;
+        font-family: Arial, sans-serif;
+    }
+    .input9 {
+        font-size: 20px;
+        top: 320px;
+        left: 700px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+        width: 500px;
+    }
+    .rectangle9 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        margin-top: -1px;
+        left: 1106px;
+        border-radius: 20px;
+    }
+    .exerciseAngina {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 390px;
+        left: 890px;
+        width: 280px;
+        padding: 12px 16px;
+        background: #333;
+        color: #f5f5f5;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: translateY(-10px);
+        transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+        z-index: 10;
+        font-family: Arial, sans-serif;
+    }
+    .input10 {
+        font-size: 20px;
+        top: 400px;
+        left: 700px;
+        padding: 18px 120px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .rectangle10 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        bottom: -5px;
+        margin-top: 2px;
+        left: 1100px;
+        border-radius: 20px;
+    }
+    .oldpeak {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 480px;
+        left: 880px;
+        width: 280px;
+        padding: 12px 16px;
+        background: #333;
+        color: #f5f5f5;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: translateY(-10px);
+        transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+        z-index: 10;
+        font-family: Arial, sans-serif;
+    }
 }
 
 @media (max-width: 1260px) {
-  .main-page-button {
-      margin-top: 20px;
-      padding: 25px 150px;
-      font-size: 30px;
-      background-color: #040109;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      border: 2px solid #040109;
-      top: 480px;
-      position: absolute;
-      right: 80px;
-      color: rgba(255, 255, 255, 0.763);
-  }
+    .main-page-button {
+        margin-top: 20px;
+        padding: 25px 150px;
+        font-size: 30px;
+        background-color: #040109;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: 2px solid #040109;
+        top: 480px;
+        position: absolute;
+        right: 80px;
+        color: rgba(255, 255, 255, 0.763);
+    }
 }
 
 @media (max-width: 1230px) {
-  .main-page-button {
-      margin-top: 20px;
-      padding: 25px 150px;
-      font-size: 30px;
-      background-color: #040109;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      border: 2px solid #040109;
-      top: 480px;
-      position: absolute;
-      right: 60px;
-      color: rgba(255, 255, 255, 0.763);
-  }
+    .main-page-button {
+        margin-top: 20px;
+        padding: 25px 150px;
+        font-size: 30px;
+        background-color: #040109;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: 2px solid #040109;
+        top: 480px;
+        position: absolute;
+        right: 60px;
+        color: rgba(255, 255, 255, 0.763);
+    }
 }
 
 @media (max-width: 1200px) {
-  .main-page-button {
-      margin-top: 20px;
-      padding: 25px 120px;
-      font-size: 30px;
-      background-color: #040109;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      border: 2px solid #040109;
-      top: 480px;
-      position: absolute;
-      right: 150px;
-      color: rgba(255, 255, 255, 0.763);
-  }
-  .input1 {
-      font-size: 20px;
-      top: 80px;
-      left: 80px;
-      padding: 18px 100px;
-      border-radius: 20px;
-      position: absolute;
-  }
-  .rectangle1 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    bottom: -5px;
-    margin-top: 80px;
-    left: 440px;
-    border-radius: 20px;
-  }
-  .input1:hover ~ .rectangle1 {
-    transform: translateX(30px);
-  }
-  .rectangle1:hover {
-    transform: translateX(50px);
-  }
-
-  .input2 {
-      font-size: 20px;
-      top: 160px;
-      left: 80px;
-      padding: 18px 100px;
-      border-radius: 20px;
-      position: absolute;
-  }
-
-  .rectangle2 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    bottom: -5px;
-    margin-top: 160px;
-    left: 440px;
-    border-radius: 20px;
-  }
-  .input3 {
-      font-size: 20px;
-      top: 240px;
-      left: 80px;
-      padding: 18px 100px;
-      border-radius: 20px;
-      position: absolute;
-  }
-
-  .rectangle3 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    bottom: -5px;
-    margin-top: 240px;
-    left: 440px;
-    border-radius: 20px;
-  }
-
-  .input4 {
-      font-size: 20px;
-      top: 320px;
-      left: 80px;
-      padding: 18px 100px;
-      border-radius: 20px;
-      position: absolute;
-  }
-  .rectangle4 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    bottom: -5px;
-    margin-top: 320px;
-    left: 440px;
-    border-radius: 20px;
-  }
-
-  .tooltip_restingBP {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 300px;
-    left: 600px;
-    width: 280px;
-    padding: 12px 16px;
-    background: #333;
-    color: #f5f5f5;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transform: translateY(-10px);
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-    z-index: 10;
-    font-family: Arial, sans-serif;
-  }
-  .input5 {
-      font-size: 20px;
-      top: 400px;
-      left: 80px;
-      padding: 18px 100px;
-      border-radius: 20px;
-      position: absolute;
-  }
-  .rectangle5 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    bottom: -5px;
-    margin-top: 400px;
-    left: 440px;
-    border-radius: 20px;
-  }
-
-  .tooltip_cholesterol {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 370px;
-    left: 600px;
-    width: 280px;
-    padding: 12px 16px;
-    background: #333;
-    color: #f5f5f5;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transform: translateY(-10px);
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-    z-index: 10;
-    font-family: Arial, sans-serif;
-  }
-  .input6 {
-      font-size: 20px;
-      top: 80px;
-      left: 600px;
-      padding: 18px 100px;
-      border-radius: 20px;
-      position: absolute;
-  }
-  .rectangle6 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    bottom: -5px;
-    margin-top: 80px;
-    left: 960px;
-    border-radius: 20px;
-  }
-
-  .tooltip_fastingBS {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 150px;
-    left: 750px;
-    width: 280px;
-    padding: 12px 16px;
-    background: #333;
-    color: #f5f5f5;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transform: translateY(-10px);
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-    z-index: 10;
-    font-family: Arial, sans-serif;
-  }
-  .input7 {
-      font-size: 20px;
-      top: 160px;
-      left: 600px;
-      padding: 18px 100px;
-      border-radius: 20px;
-      position: absolute;
-  }
-  .rectangle7 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    bottom: -5px;
-    margin-top: 160px;
-    left: 960px;
-    border-radius: 20px;
-  }
-
-  .tooltip_restingECG {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 230px;
-    left: 750px;
-    width: 280px;
-    padding: 12px 16px;
-    background: #333;
-    color: #f5f5f5;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transform: translateY(-10px);
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-    z-index: 10;
-    font-family: Arial, sans-serif;
-  }
-  .input8 {
-      font-size: 20px;
-      top: 240px;
-      left: 600px;
-      padding: 18px 100px;
-      border-radius: 20px;
-      position: absolute;
-  }
-  .rectangle8 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    bottom: -5px;
-    margin-top: 1px;
-    left: 960px;
-    border-radius: 20px;
-  }
-
-  .tooltip_maxHR {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 310px;
-    left: 750px;
-    width: 280px;
-    padding: 12px 16px;
-    background: #333;
-    color: #f5f5f5;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transform: translateY(-10px);
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-    z-index: 10;
-    font-family: Arial, sans-serif;
-  }
-  .input9 {
-      font-size: 20px;
-      top: 320px;
-      left: 600px;
-      padding: 18px 100px;
-      border-radius: 20px;
-      position: absolute;
-  }
-  .rectangle9 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    bottom: -5px;
-    margin-top: -1px;
-    left: 960px;
-    border-radius: 20px;
-  }
-
-  .exerciseAngina {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 390px;
-    left: 740px;
-    width: 280px;
-    padding: 12px 16px;
-    background: #333;
-    color: #f5f5f5;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transform: translateY(-10px);
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-    z-index: 10;
-    font-family: Arial, sans-serif;
-  }
-  .input10 {
-      font-size: 20px;
-      top: 400px;
-      left: 600px;
-      padding: 18px 100px;
-      border-radius: 20px;
-      position: absolute;
-  }
-  .rectangle10 {
-    width: 100px;
-    height: 55px;
-    background-color: black;
-    position: relative;
-    bottom: -5px;
-    margin-top: 2px;
-    left: 960px;
-    border-radius: 20px;
-  }
-
-  .oldpeak {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 480px;
-    left: 740px;
-    width: 280px;
-    padding: 12px 16px;
-    background: #333;
-    color: #f5f5f5;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transform: translateY(-10px);
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-    z-index: 10;
-    font-family: Arial, sans-serif;
-  }
+    .main-page-button {
+        margin-top: 20px;
+        padding: 25px 120px;
+        font-size: 30px;
+        background-color: #040109;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: 2px solid #040109;
+        top: 480px;
+        position: absolute;
+        right: 150px;
+        color: rgba(255, 255, 255, 0.763);
+    }
+    .input1 {
+        font-size: 20px;
+        top: 80px;
+        left: 80px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .rectangle1 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        bottom: -5px;
+        margin-top: 80px;
+        left: 440px;
+        border-radius: 20px;
+    }
+    .input1:hover~.rectangle1 {
+        transform: translateX(30px);
+    }
+    .rectangle1:hover {
+        transform: translateX(50px);
+    }
+    .input2 {
+        font-size: 20px;
+        top: 160px;
+        left: 80px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .rectangle2 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        bottom: -5px;
+        margin-top: 160px;
+        left: 440px;
+        border-radius: 20px;
+    }
+    .input3 {
+        font-size: 20px;
+        top: 240px;
+        left: 80px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .rectangle3 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        bottom: -5px;
+        margin-top: 240px;
+        left: 440px;
+        border-radius: 20px;
+    }
+    .input4 {
+        font-size: 20px;
+        top: 320px;
+        left: 80px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .rectangle4 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        bottom: -5px;
+        margin-top: 320px;
+        left: 440px;
+        border-radius: 20px;
+    }
+    .tooltip_restingBP {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 300px;
+        left: 600px;
+        width: 280px;
+        padding: 12px 16px;
+        background: #333;
+        color: #f5f5f5;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: translateY(-10px);
+        transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+        z-index: 10;
+        font-family: Arial, sans-serif;
+    }
+    .input5 {
+        font-size: 20px;
+        top: 400px;
+        left: 80px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .rectangle5 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        bottom: -5px;
+        margin-top: 400px;
+        left: 440px;
+        border-radius: 20px;
+    }
+    .tooltip_cholesterol {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 370px;
+        left: 600px;
+        width: 280px;
+        padding: 12px 16px;
+        background: #333;
+        color: #f5f5f5;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: translateY(-10px);
+        transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+        z-index: 10;
+        font-family: Arial, sans-serif;
+    }
+    .input6 {
+        font-size: 20px;
+        top: 80px;
+        left: 600px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .rectangle6 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        bottom: -5px;
+        margin-top: 80px;
+        left: 960px;
+        border-radius: 20px;
+    }
+    .tooltip_fastingBS {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 150px;
+        left: 750px;
+        width: 280px;
+        padding: 12px 16px;
+        background: #333;
+        color: #f5f5f5;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: translateY(-10px);
+        transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+        z-index: 10;
+        font-family: Arial, sans-serif;
+    }
+    .input7 {
+        font-size: 20px;
+        top: 160px;
+        left: 600px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .rectangle7 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        bottom: -5px;
+        margin-top: 160px;
+        left: 960px;
+        border-radius: 20px;
+    }
+    .tooltip_restingECG {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 230px;
+        left: 750px;
+        width: 280px;
+        padding: 12px 16px;
+        background: #333;
+        color: #f5f5f5;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: translateY(-10px);
+        transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+        z-index: 10;
+        font-family: Arial, sans-serif;
+    }
+    .input8 {
+        font-size: 20px;
+        top: 240px;
+        left: 600px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .rectangle8 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        bottom: -5px;
+        margin-top: 1px;
+        left: 960px;
+        border-radius: 20px;
+    }
+    .tooltip_maxHR {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 310px;
+        left: 750px;
+        width: 280px;
+        padding: 12px 16px;
+        background: #333;
+        color: #f5f5f5;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: translateY(-10px);
+        transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+        z-index: 10;
+        font-family: Arial, sans-serif;
+    }
+    .input9 {
+        font-size: 20px;
+        top: 320px;
+        left: 600px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .rectangle9 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        bottom: -5px;
+        margin-top: -1px;
+        left: 960px;
+        border-radius: 20px;
+    }
+    .exerciseAngina {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 390px;
+        left: 740px;
+        width: 280px;
+        padding: 12px 16px;
+        background: #333;
+        color: #f5f5f5;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: translateY(-10px);
+        transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+        z-index: 10;
+        font-family: Arial, sans-serif;
+    }
+    .input10 {
+        font-size: 20px;
+        top: 400px;
+        left: 600px;
+        padding: 18px 100px;
+        border-radius: 20px;
+        position: absolute;
+    }
+    .rectangle10 {
+        width: 100px;
+        height: 55px;
+        background-color: black;
+        position: relative;
+        bottom: -5px;
+        margin-top: 2px;
+        left: 960px;
+        border-radius: 20px;
+    }
+    .oldpeak {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 480px;
+        left: 740px;
+        width: 280px;
+        padding: 12px 16px;
+        background: #333;
+        color: #f5f5f5;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: translateY(-10px);
+        transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+        z-index: 10;
+        font-family: Arial, sans-serif;
+    }
 }
 
 @media (max-width: 1140px) {
-  .main-page-button {
-      margin-top: 20px;
-      padding: 25px 120px;
-      font-size: 30px;
-      background-color: #040109;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      border: 2px solid #040109;
-      top: 480px;
-      position: absolute;
-      right: 80px;
-      color: rgba(255, 255, 255, 0.763);
-  }
+    .main-page-button {
+        margin-top: 20px;
+        padding: 25px 120px;
+        font-size: 30px;
+        background-color: #040109;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: 2px solid #040109;
+        top: 480px;
+        position: absolute;
+        right: 80px;
+        color: rgba(255, 255, 255, 0.763);
+    }
 }
 
-
 .input-container {
-position: absolute;
-
+    position: absolute;
 }
 
 .input-container input {
-z-index: 2;
-position: absolute;
+    z-index: 2;
+    position: absolute;
 }
+
 
 /* .background {
-position: absolute;
-top: 50%;
-left: 350px;
-width: 200px;
-height: 50px;
-background-color: black;
-border-radius: 20px;
-transform:translateY(-50%);
-transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-z-index: 1;
-} */
+  position: absolute;
+  top: 50%;
+  left: 350px;
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  border-radius: 20px;
+  transform:translateY(-50%);
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  z-index: 1;
+  } */
+
 
 /* .input-container:hover .background {
-transform: translateY(-45%);
-box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-background-color: rgba(0, 0, 0, 0.7);
-} */
+  transform: translateY(-45%);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
+  } */
+
 
 /* .input-container:active .background {
-transform: translateY(-40%);
-background-color: #6200ea;
-box-shadow: 0 0 20px #6200ea;
-} */
+  transform: translateY(-40%);
+  background-color: #6200ea;
+  box-shadow: 0 0 20px #6200ea;
+  } */
 
 .input-container input:focus {
-outline: none;
-box-shadow: 0 0 10px rgba(98, 0, 234, 0.8);
+    outline: none;
+    box-shadow: 0 0 10px rgba(98, 0, 234, 0.8);
 }
 
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
+.modal-image {
+    width: 317px;
+    height: 340px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
 
-
-
-
+.modal-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+    line-height: 36.31px;
+}
