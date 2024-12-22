@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 import { ModalService } from './modal/services/modal.service';
 
-// Визначення типу відповіді від API
 interface HeartDiseaseResponse {
   prediction: number[];
   probabilities: {
@@ -72,6 +71,7 @@ export class MainPageComponent {
       console.log('modalAction', action);
     });
   }
+  
 
   onSubmit(modalTemplate: TemplateRef<any>, modalTemplate1: TemplateRef<any>, modalTemplate2: TemplateRef<any>) {
     const transformedData = {

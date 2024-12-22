@@ -15,7 +15,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
     border: 2px solid #040109;
-    top: 480px;
+    top: 550px;
     position: absolute;
     right: 250px;
     color: rgba(255, 255, 255, 0.763);
@@ -1062,7 +1062,7 @@ body {
         cursor: pointer;
         transition: background-color 0.3s ease;
         border: 2px solid #040109;
-        top: 480px;
+        top: 550px;
         position: absolute;
         right: 120px;
         color: rgba(255, 255, 255, 0.763);

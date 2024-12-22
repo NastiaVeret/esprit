@@ -54,3 +54,13 @@
     font-size: 24px;
     cursor: pointer;
 }
+
+.modal {
+    display: block;
+    /* За замовчуванням модалка видима */
+}
+
+.modal.hidden {
+    display: none;
+    /* Цей клас приховає модалку */
+}
