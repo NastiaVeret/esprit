@@ -4,8 +4,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 import { ModalService } from './modal/services/modal.service';
 
+// Визначення типу відповіді від API
 interface HeartDiseaseResponse {
   prediction: number[];
+  probabilities: {
+    random_forest: number;
+    perceptron: number;
+    gaussian_nb: number;
+    xgboost: number;
+    lightgbm: number;
+  };
+  average_probability: number;
 }
 
 @Component({
@@ -19,16 +28,21 @@ interface HeartDiseaseResponse {
 export class MainPageComponent {
   formData: {
     age: number;
-    sex: boolean; // 0 - жінка, 1 - чоловік
-    chestPainType: number;
+    sex: boolean | null;
+    chestPainType: number | null;
     restingBP: number;
     cholesterol: number;
-    fastingBS: number;
+    fastingBS: number | null;
     restingECG: number;
     maxHR: number;
-    exerciseAngina: boolean;
+    exerciseAngina: boolean | null;
     oldpeak: number;
-  } = {} as any;
+  } = {
+    sex: null,
+    chestPainType: null,
+    fastingBS: null,
+    exerciseAngina: null
+  } as any;
 
   constructor(
     private modalService: ModalService,
@@ -36,31 +50,52 @@ export class MainPageComponent {
     private cdr: ChangeDetectorRef
   ) {}
 
+  onSexChange(event: Event) {
+    const selectElement = event.target as HTMLSelectElement;
+    this.formData.sex = selectElement.value === 'true' ? true : (selectElement.value === 'false' ? false : null);
+  }
+  onChestPainTypeChange(event: Event) {
+    const selectElement = event.target as HTMLSelectElement;
+    this.formData.chestPainType = selectElement.value ? Number(selectElement.value) : null;
+  }  
+
+  onFastingBSChange(event: Event) {
+    const selectElement = event.target as HTMLSelectElement;
+    this.formData.fastingBS = selectElement.value ? Number(selectElement.value) : null;
+  }  
+  onExerciseAnginaChange(event: Event) {
+    const selectElement = event.target as HTMLSelectElement;
+    this.formData.exerciseAngina = selectElement.value ? Boolean(selectElement.value) : null;
+  }  
   openModal(modalTemplate: TemplateRef<any>) {
     this.modalService.open(modalTemplate, { size: 'lg', title: ' ' }).subscribe((action) => {
       console.log('modalAction', action);
     });
   }
 
-  onSubmit(modalTemplate: TemplateRef<any>, modalTemplate1: TemplateRef<any>) {
+  onSubmit(modalTemplate: TemplateRef<any>, modalTemplate1: TemplateRef<any>, modalTemplate2: TemplateRef<any>) {
     const transformedData = {
       age: Number(this.formData.age),
-      sex: Number(this.formData.sex) == 1 ? true : false, 
+      sex: this.formData.sex,  
       chestPainType: Number(this.formData.chestPainType),
       restingBP: Number(this.formData.restingBP),
       cholesterol: Number(this.formData.cholesterol),
       fastingBS: Number(this.formData.fastingBS),
       restingECG: Number(this.formData.restingECG),
       maxHR: Number(this.formData.maxHR),
-      exerciseAngina: Number(this.formData.exerciseAngina) === 1 ? true : false,
+      exerciseAngina: this.formData.exerciseAngina === true,
       oldpeak: Number(this.formData.oldpeak)
     };
+
+    console.log(transformedData);
 
     this.http.post<HeartDiseaseResponse>('https://localhost:7133/api/HeartDisease', transformedData)
       .subscribe(
         (response) => {
-          if (response.prediction && response.prediction[0] === 0) {
-            this.openModal(modalTemplate);
+          if (+response.average_probability <= 33) { 
+            this.openModal(modalTemplate); 
+          } else if (+response.average_probability > 33 && +response.average_probability < 66) {
+            this.openModal(modalTemplate2);
           } else {
             this.openModal(modalTemplate1);
           }

@@ -1,51 +1,155 @@
 <body>
     <main>
-        <form (ngSubmit)="onSubmit(modalTemplate, modalTemplate1)">
-            <input class="input1" type="text" [(ngModel)]="formData.age" name="age" required placeholder="Введіть вік">
-            <select class="input2" [(ngModel)]="formData.sex" name="sex" required placeholder="Стать">
-                <option [value]="false">Жінка</option>
-                <option [value]="true">Чоловік</option>
-            </select>
+        <form (ngSubmit)="onSubmit(modalTemplate, modalTemplate1, modalTemplate2)">
+            <div class="input-container">
+                <input class="input1" type="text" [(ngModel)]="formData.age" name="age" required placeholder="Вік">
+                <div class="rectangle1">
+                    <span class="info">і</span>
+                </div>
+                <div class="tooltip_age">
+                    <p>Введіть вік
+                    </p>
+                </div>
+            </div>
 
-            <select class="input3" [(ngModel)]="formData.chestPainType" name="chestPainType" required>
-                <option [value]="1">Типова стенокардія, тобто біль у грудях, пов'язаний із серцем</option>
-                <option [value]="2">Атипова стенокардія, тобто біль у грудях, не пов'язаний з серцем</option>
-                <option [value]="3">Неангінальний біль, який зазвичай є гострим і непостійним</option>
-                <option [value]="4">Безсимптомний, тобто людина не відчуває жодних симптомів</option>
-            </select>
-            <input class="input4" type="text" [(ngModel)]="formData.restingBP" name="restingBP" required placeholder="Введіть RestingBP">
-            <input class="input5" type="text" [(ngModel)]="formData.cholesterol" name="cholesterol" required placeholder="Введіть Cholesterol">
-            <select class="input6" [(ngModel)]="formData.fastingBS" name="fastingBS" required placeholder="FastingBS">
-                <option [value]="0">Цукор в крові перевищує 120 мг/дл</option>
-                <option [value]="1">Цукор в крові не перевищує 120 мг/дл</option>
-            </select>
-            <input class="input7" type="text" [(ngModel)]="formData.restingECG" name="restingECG" required placeholder="Введіть RestingECG">
-            <select class="input6" [(ngModel)]="formData.sex" name="sex" required placeholder="RestingECG">
-                <option [value]="0 ">Цукор в крові перевищує 120 мг/дл</option>
-                <option [value]="1 ">Цукор в крові не перевищує 120 мг/дл</option>
-                <option [value]="2 ">Цукор в крові не перевищує 120 мг/дл</option>
-            </select>
-            <input class="input8 " type="text " [(ngModel)]="formData.maxHR " name="maxHR " required placeholder="Введіть MaxHR ">
-            <input class="input9 " type="text " [(ngModel)]="formData.exerciseAngina " name="exerciseAngina " required placeholder="Введіть ExerciseAngina ">
-            <input class="input10 " type="text " [(ngModel)]="formData.oldpeak " name="oldpeak " required placeholder="Введіть Oldpeak ">
+            <div class="input-container">
+                <div>
+                    <select class="input2 placeholder" (change)="onSexChange($event)" [class.placeholder]="!formData.sex">
+                    <option value="" disabled [selected]="formData.sex === null">Стать</option> 
+                    <option value="true">Чоловік</option>
+                    <option value="false">Жінка</option>
+                  </select>
+                </div>
+                <div class="rectangle2">
+                    <span class="info">і</span>
+                </div>
+                <div class="tooltip_sex">
+                    <p>Оберіть стать
+                    </p>
+                </div>
+            </div>
 
+            <div class="input-container">
+                <select class="input3 placeholder" (change)="onChestPainTypeChange($event)" [class.placeholder]="!formData.chestPainType">
+                  <option value="" disabled [selected]="formData.chestPainType === null">Тип болю в грудях</option>
+                  <option value="1">Типова стенокардія</option>
+                  <option value="2">Атипова стенокардія</option>
+                  <option value="3">Неангінальний біль</option>
+                  <option value="4">Безсимптомний біль</option>
+                </select>
+                <div class="rectangle3">
+                    <span class="info">і</span>
+                </div>
+                <div class="tooltip_chestPainType">
+                    <p>Введіть тип болю в грудях. Типова стенокардія, тобто біль у грудях, пов'язаний із серцем. Атипова стенокардія, тобто біль у грудях, не пов'язаний з серцем. Неангінальний біль, який зазвичай є гострим і непостійним. Безсимптомний, тобто
+                        людина не відчуває жодних симптомів
+                    </p>
+                </div>
+            </div>
+            <div class="input-container">
+                <input class="input4" type="text" [(ngModel)]="formData.restingBP" name="restingBP" required placeholder="Артеріальний тиск">
+                <div class="rectangle4">
+                    <span class="info">і</span>
+                </div>
+                <div class="tooltip_restingBP">
+                    <p>Введіть артеріальний тиск, коли ви перебуваєте у стані спокою (в мм рт. ст.).
+                        <br> <a href="https://youtu.be/uOFf_6pQe_A?si=_A0A0q8GpcP7IDz6" target="_blank">Подивитись як вимірюють тиск тут</a></p>
+                </div>
+            </div>
+            <div class="input-container">
+                <input class="input5" type="text" [(ngModel)]="formData.cholesterol" name="cholesterol" required placeholder="Рівень холестерину">
+                <div class="rectangle5">
+                    <span class="info" id="info">i</span>
+                </div>
+                <div class="tooltip_cholesterol">
+                    <p>Вкажіть рівень холестерину в крові в мг/дл(міліграмах на децилітр).
+                        <br> <a href="https://empendium.com/ua/kalkulatory/303841,hlyukoza" target="_blank">Перевести значення ммоль/л в мг/дл </a></p>
+                </div>
+            </div>
+            <div class="input-container">
+                <select class="input6 placeholder" (change)="onFastingBSChange($event)" [class.placeholder]="!formData.fastingBS">
+                    <option value="" disabled [selected]="formData.fastingBS === null">Рівень цукру</option>
+                    <option value="1">1</option>
+                    <option value="0">0</option>
+                  </select>
+                <div class="rectangle6">
+                    <span class="info" id="info">i</span>
+                </div>
+                <div class="tooltip_fastingBS">
+                    <p>Вкажіть 1, якщо рівень цукру в крові натще перевищує 120 мг/дл, в іншому випадку - 0.
+                        <!-- <br> <a href="https://youtu.be/uOFf_6pQe_A?si=_A0A0q8GpcP7IDz6" target="_blank">Подивитись як вимірюють тиск </a></p> -->
+                </div>
+            </div>
+            <div class="input-container">
+                <input class="input7" type="text" [(ngModel)]="formData.restingECG" name="restingECG" required placeholder="Результат ЕКГ">
+                <div class="rectangle7">
+                    <span class="info" id="info">i</span>
+                </div>
+                <div class="tooltip_restingECG">
+                    <p>Результат електрокардіограми (ЕКГ) у стані спокою для виявлення ознак серцевих проблем.
+                        <!-- <br> <a href="https://youtu.be/uOFf_6pQe_A?si=_A0A0q8GpcP7IDz6" target="_blank">Подивитись як вимірюють тиск </a></p> -->
+                </div>
+            </div>
+            <div class="input-container">
+                <input class="input8" type="text" [(ngModel)]="formData.maxHR" name="maxHR" required placeholder="Серцеві скорочення">
+                <div class="rectangle8">
+                    <span class="info" id="info">i</span>
+                </div>
+                <div class="tooltip_maxHR">
+                    <p>Вкажіть максимальну частоту серцевих скорочень, якої ви досягали.
+                        <br> <a href="https://youtu.be/tkdcRN_Kg00?si=AtTHPMYzan6XQat-" target="_blank">Як вимірювати число серцевих скорочень? </a></p>
+                </div>
+            </div>
+            <div class="input-container">
+                <select class="input9 placeholder" (change)="onExerciseAnginaChange($event)" [class.placeholder]="!formData.exerciseAngina">
+        <option value="" disabled [selected]="formData.exerciseAngina === null">Стенокардія?</option>
+        <option value="1">1</option>
+        <option value="0">0</option>
+    </select>
+                <div class="rectangle9">
+                    <span class="info" id="info">i</span>
+                </div>
+                <div class="exerciseAngina">
+                    <p>Якщо під час фізичних навантажень ви відчуваєте стенокардію (біль у грудях), виберіть 1, в іншому випадку - 0.
+                </div>
+            </div>
+            <div class="input-container">
+                <input class="input10" type="text" [(ngModel)]="formData.oldpeak" name="oldpeak" required placeholder="Депресія">
+                <div class="rectangle10">
+                    <span class="info" id="info">i</span>
+                </div>
+                <div class="oldpeak">
+                    <p>Це медичний показник, який визначається за допомогою електрокардіографії (ЕКГ) під час фізичного навантаження (стрес-тесту). Депресія, спричинена активністю порівняно зі спокоєм
+                        <!-- <br> <a href="https://youtu.be/uOFf_6pQe_A?si=_A0A0q8GpcP7IDz6" target="_blank">Подивитись як вимірюють тиск </a></p> -->
+                </div>
+            </div>
             <button type="submit " class="main-page-button ">Надіслати</button>
         </form>
     </main>
 
     <!-- Модальне вікно для Prediction 0 -->
     <ng-template #modalTemplate>
-        <div class="modal-content ">
-            <div class="modal-text ">ВИ ЖИВІ!</div>
-            <img src="/assets/images/mc_petya.jpg " alt="mc_petya " class="modal-image ">
+        <div class="modal-content">
+            <div class="modal-text ">Вітаємо! З вами все добре. У вас немає ризику появи серцево-судинних захворювань</div>
+            <img src="/assets/images/happy.jpg " alt="mc_petya " class="modal-image">
         </div>
     </ng-template>
 
     <!-- Модальне вікно для Prediction 1 -->
     <ng-template #modalTemplate1>
-        <div class="modal-content ">
-            <div class="modal-text ">ПОТРІБНА ДОПОМОГА!</div>
-            <img src="/assets/images/sick_cats.jpg " alt="help_image " class="modal-image ">
+        <div class="modal-content">
+            <div class="modal-text ">Вам необхідно пройти термінове обстеження!</div>
+            <img src="/assets/images/sick_cats.jpg " alt="help_image " class="modal-image">
         </div>
     </ng-template>
+
+    <ng-template #modalTemplate2>
+        <div class="modal-content">
+            <div class="modal-text ">Ви в зоні ризику!</div>
+            <img src="/assets/images/so-so.jpg " alt="so-so " class="modal-image">
+        </div>
+    </ng-template>
+
+
+
 </body>
