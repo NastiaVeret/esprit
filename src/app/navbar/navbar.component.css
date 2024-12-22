@@ -1,0 +1,53 @@
+.navbar-home {
+    background-color: #d1c4e9 !important;
+}
+
+.navbar-home .nav-links a {
+    color: white !important;
+}
+
+.navbar-main {
+    background-color: white !important;
+}
+
+.navbar-main .nav-links a {
+    color: #d1c4e9 !important;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    letter-spacing: 0.05rem;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 3rem;
+}
+
+.navbar .nav-links a:hover {
+    color: #ffcc00;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
