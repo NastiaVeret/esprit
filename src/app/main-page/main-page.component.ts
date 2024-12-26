@@ -3,8 +3,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 import { ModalService } from './modal/services/modal.service';
+import { HeartDiseaseService } from '../heart-disease.service';
 
-interface HeartDiseaseResponse {
+export interface HeartDiseaseResponse {
   prediction: number[];
   probabilities: {
     random_forest: number;
@@ -25,6 +26,8 @@ interface HeartDiseaseResponse {
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent {
+
+
   formData: {
     age: number;
     sex: boolean | null;
@@ -46,7 +49,8 @@ export class MainPageComponent {
   constructor(
     private modalService: ModalService,
     private http: HttpClient,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private heartDiseaseService: HeartDiseaseService,
   ) {}
 
   onSexChange(event: Event) {
@@ -71,7 +75,39 @@ export class MainPageComponent {
       console.log('modalAction', action);
     });
   }
-  
+
+  // onSubmit(modalTemplate: TemplateRef<any>, modalTemplate1: TemplateRef<any>, modalTemplate2: TemplateRef<any>) {
+  //   const transformedData = {
+  //     age: Number(this.formData.age),
+  //     sex: this.formData.sex,  
+  //     chestPainType: Number(this.formData.chestPainType),
+  //     restingBP: Number(this.formData.restingBP),
+  //     cholesterol: Number(this.formData.cholesterol),
+  //     fastingBS: Number(this.formData.fastingBS),
+  //     restingECG: Number(this.formData.restingECG),
+  //     maxHR: Number(this.formData.maxHR),
+  //     exerciseAngina: this.formData.exerciseAngina === true,
+  //     oldpeak: Number(this.formData.oldpeak)
+  //   };
+
+  //   console.log(transformedData);
+
+  //   this.http.post<HeartDiseaseResponse>('https://localhost:7133/api/HeartDisease', transformedData)
+  //     .subscribe(
+  //       (response) => {
+  //         if (+response.average_probability <= 33) { 
+  //           this.openModal(modalTemplate); 
+  //         } else if (+response.average_probability > 33 && +response.average_probability < 66) {
+  //           this.openModal(modalTemplate2);
+  //         } else {
+  //           this.openModal(modalTemplate1);
+  //         }
+  //       },
+  //       (error) => {
+  //         console.error('Помилка при відправці:', error);
+  //       }
+  //     );
+  // }
 
   onSubmit(modalTemplate: TemplateRef<any>, modalTemplate1: TemplateRef<any>, modalTemplate2: TemplateRef<any>) {
     const transformedData = {
@@ -86,23 +122,38 @@ export class MainPageComponent {
       exerciseAngina: this.formData.exerciseAngina === true,
       oldpeak: Number(this.formData.oldpeak)
     };
-
+  
     console.log(transformedData);
-
-    this.http.post<HeartDiseaseResponse>('https://localhost:7133/api/HeartDisease', transformedData)
-      .subscribe(
-        (response) => {
-          if (+response.average_probability <= 33) { 
-            this.openModal(modalTemplate); 
-          } else if (+response.average_probability > 33 && +response.average_probability < 66) {
-            this.openModal(modalTemplate2);
-          } else {
-            this.openModal(modalTemplate1);
-          }
+  
+    // Simulate a delay for the fake response (like an HTTP request)
+    setTimeout(() => {
+      // Fake response object
+      const fakeResponse: HeartDiseaseResponse = {
+        prediction: [1], // Example prediction, could be 1 (disease) or 0 (no disease)
+        probabilities: {
+          random_forest: 0.5,
+          perceptron: 0.7,
+          gaussian_nb: 0.3,
+          xgboost: 0.6,
+          lightgbm: 0.8
         },
-        (error) => {
-          console.error('Помилка при відправці:', error);
-        }
-      );
+        average_probability: 45 // Average probability value between 0 and 100
+      };
+
+      this.heartDiseaseService.setHeartDiseaseResponse(fakeResponse);
+      
+      console.log(fakeResponse)
+      // Simulate the logic based on the average_probability
+      if (+fakeResponse.average_probability <= 33) { 
+        this.openModal(modalTemplate); 
+      } else if (+fakeResponse.average_probability > 33 && +fakeResponse.average_probability < 66) {
+        this.openModal(modalTemplate2);
+      } else {
+        this.openModal(modalTemplate1);
+      }
+  
+    }, 1000); // Simulate a 1 second delay (you can adjust this as needed)
   }
+  
+
 }

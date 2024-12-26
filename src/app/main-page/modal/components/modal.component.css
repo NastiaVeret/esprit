@@ -64,3 +64,23 @@
     display: none;
     /* Цей клас приховає модалку */
 }
+
+.btn {
+    padding: 20px 20px;
+    background-color: #ffffff; /* Change this to your desired color */
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  
+    position: absolute; /* Position it absolutely within its container */
+    bottom: 10px; /* 10px from the bottom */
+    right: 10px; /* 10px from the right */
+  }
+  
+  
+.btn:hover {
+    text-decoration: underline; /* Підкреслення тексту при наведенні */
+  }
