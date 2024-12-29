@@ -15,7 +15,6 @@ export class ModalComponent {
   @Output() closeEvent = new EventEmitter();
   @Output() submitEvent = new EventEmitter();
 
-  // Store the reference to the dynamically created component
   private dynamicComponentRef?: ComponentRef<DetailComponent>;
 
   constructor(
@@ -36,7 +35,7 @@ export class ModalComponent {
     this.submitEvent.emit();
   }
 
-  newModalOpen = false; // Track the state of the new modal
+  newModalOpen = false; 
 
   openNewModal() {
     this.newModalOpen = true;
@@ -48,14 +47,13 @@ export class ModalComponent {
 
   loadOtherComponent() {
     if (this.dynamicComponentRef) {
-      // If the component is already loaded, destroy it (close it)
       this.dynamicComponentRef.destroy();
       this.dynamicComponentRef = undefined;
     } else {
-      // If the component is not loaded, create it
-      this.dynamicComponentContainer.clear(); // Clear the container
+      this.dynamicComponentContainer.clear(); 
       const factory = this.componentFactoryResolver.resolveComponentFactory(DetailComponent);
       this.dynamicComponentRef = this.dynamicComponentContainer.createComponent(factory);
+      this.dynamicComponentRef.instance.loadData();
     }
   }
 }
