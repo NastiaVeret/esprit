@@ -1,0 +1,11 @@
+<div class="container">
+    <p class="detail-message">Яка ймовірність, що у вас є серцеві хвороби?</p>
+
+    <p class="model">Random Forest: <span>{{ heartDiseaseResponse.probabilities.random_forest }}%</span></p>
+    <p class="model">Perceptron: <span>{{ heartDiseaseResponse.probabilities.perceptron }}%</span></p>
+    <p class="model">Gaussian Naive Bayes: <span>{{ heartDiseaseResponse.probabilities.gaussian_nb }}%</span></p>
+    <p class="model">XGBoost: <span>{{ heartDiseaseResponse.probabilities.xgboost }}%</span></p>
+    <p class="model">LightGBM: <span>{{ heartDiseaseResponse.probabilities.lightgbm }}%</span></p>
+    <p class="average">Середнє: <span>{{ heartDiseaseResponse.average_probability }}%</span></p>
+
+</div>

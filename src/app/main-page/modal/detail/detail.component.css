@@ -1,0 +1,35 @@
+
+  .container {
+    width: 205px;
+    height: 376px;
+  position: absolute;
+  right: -214px;
+  border-radius: 20px;
+  top: 65%; /* Adjusts the vertical position */
+  transform: translateY(-60%); /* Centers the container vertically */
+  background-color: white;
+  border: 1px solid #040109;
+}
+
+.detail-message {
+    text-align: center;
+    font-size: 17px;
+    padding: 10px 20px 10px 20px;
+  }
+
+.model{
+    font-size: 13px;
+    padding: 5px 10px 10px 20px;
+}
+
+.model:hover {
+  font-size: 14px; 
+  color: #d1c4e9; 
+}
+
+.average{
+    background-color: #d1c4e9;
+    font-size: 17px;
+    padding: 5px 10px 10px 20px;
+}
+  
