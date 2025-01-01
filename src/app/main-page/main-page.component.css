@@ -612,6 +612,9 @@ body {
     padding: 18px 150px;
     border-radius: 20px;
     position: absolute;
+    width: 553px;
+    z-index: 1;
+    border: 2px solid black;
 }
 
 .rectangle7 {
@@ -930,6 +933,14 @@ body {
 }
 
 .input2:not(.placeholder) {
+    color: black;
+}
+
+.input7.placeholder {
+    color: #6c757d;
+}
+
+.input7:not(.placeholder) {
     color: black;
 }
 

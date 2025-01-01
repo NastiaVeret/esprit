@@ -20,15 +20,12 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 687px;
-    /* Ширина модального вікна */
     height: 481px;
-    /* Висота модального вікна */
     border: 1px solid rgb(0, 0, 0);
     background-color: white;
     border-radius: 20px;
     padding: 20px;
     box-sizing: border-box;
-    /* Враховує padding у загальний розмір */
 }
 
 .modal-header {
@@ -57,30 +54,44 @@
 
 .modal {
     display: block;
-    /* За замовчуванням модалка видима */
 }
 
 .modal.hidden {
     display: none;
-    /* Цей клас приховає модалку */
 }
 
 .btn {
     padding: 20px 20px;
-    background-color: #ffffff; /* Change this to your desired color */
+    background-color: #ffffff;
     color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s ease;
-  
-    position: absolute; /* Position it absolutely within its container */
-    bottom: 10px; /* 10px from the bottom */
-    right: 10px; /* 10px from the right */
-  }
-  
-  
+    position: absolute;
+    top: 350px;
+    right: 10px;
+}
+
+.btn2 {
+    padding: 20px 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 400px;
+    right: 10px;
+}
+
 .btn:hover {
-    text-decoration: underline; /* Підкреслення тексту при наведенні */
-  }
+    text-decoration: underline;
+}
+
+.btn2:hover {
+    text-decoration: underline;
+}

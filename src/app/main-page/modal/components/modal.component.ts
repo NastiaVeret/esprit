@@ -1,5 +1,6 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild, ViewContainerRef, ComponentFactoryResolver, ComponentRef } from '@angular/core';
-import { DetailComponent } from '../detail/detail.component'; // Import the component to load
+import { DetailComponent } from '../detail/detail.component'; 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'modal',
@@ -19,7 +20,8 @@ export class ModalComponent {
 
   constructor(
     private elementRef: ElementRef,
-    private componentFactoryResolver: ComponentFactoryResolver
+    private componentFactoryResolver: ComponentFactoryResolver,
+    private router: Router
   ) {}
 
   @ViewChild('dynamicComponentContainer', { read: ViewContainerRef })
@@ -55,5 +57,9 @@ export class ModalComponent {
       this.dynamicComponentRef = this.dynamicComponentContainer.createComponent(factory);
       this.dynamicComponentRef.instance.loadData();
     }
+  }
+  loadRecomendation() {
+    this.close();
+    this.router.navigate(['/tips']);
   }
 }

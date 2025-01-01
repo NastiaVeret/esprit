@@ -34,7 +34,7 @@ export class MainPageComponent {
     restingBP: number;
     cholesterol: number;
     fastingBS: number | null;
-    restingECG: number;
+    restingECG: number | null;
     maxHR: number;
     exerciseAngina: boolean | null;
     oldpeak: number;
@@ -42,7 +42,8 @@ export class MainPageComponent {
     sex: null,
     chestPainType: null,
     fastingBS: null,
-    exerciseAngina: null
+    exerciseAngina: null,
+    restingECG: null
   } as any;
 
   constructor(
@@ -71,7 +72,10 @@ export class MainPageComponent {
     const selectElement = event.target as HTMLSelectElement;
     this.formData.exerciseAngina = selectElement.value ? Boolean(selectElement.value) : null;
   }
-
+  onRestingECGChange(event: Event) {
+    const selectElement = event.target as HTMLSelectElement;
+    this.formData.restingECG = selectElement.value ? Number(selectElement.value) : null;
+  }
   openModal(modalTemplate: TemplateRef<any>) {
     this.modalService.open(modalTemplate, { size: 'lg', title: ' ' }).subscribe((action) => {
       console.log('modalAction', action);
@@ -79,6 +83,27 @@ export class MainPageComponent {
   }
 
   onSubmit(modalTemplate: TemplateRef<any>, modalTemplate1: TemplateRef<any>, modalTemplate2: TemplateRef<any>) {
+    if (this.formData.age < 0 || isNaN(Number(this.formData.age))) {
+      alert("Вік не може бути від'ємним або містити літери.");
+      return
+    }
+  
+    if (this.formData.restingBP < 0 || isNaN(Number(this.formData.restingBP))) {
+      alert("Артеріальний тиск не може бути від'ємним або містити літери.");
+      return
+    } 
+    if (this.formData.cholesterol < 0 || isNaN(Number(this.formData.cholesterol))) {
+      alert("Рівень холестерину не може бути від'ємним або містити літери.");
+      return
+    } 
+    if (this.formData.maxHR < 0 || isNaN(Number(this.formData.maxHR))) {
+      alert("Серцеві скорочення не можуть бути від'ємним або містити літери.");
+      return
+    } 
+    if (this.formData.oldpeak < 0 || isNaN(Number(this.formData.oldpeak))) {
+      alert("Не може бути від'ємним або містити літери.");
+      return
+    } 
     const transformedData = {
       age: Number(this.formData.age),
       sex: this.formData.sex,
@@ -91,16 +116,16 @@ export class MainPageComponent {
       exerciseAngina: this.formData.exerciseAngina === true,
       oldpeak: Number(this.formData.oldpeak)
     };
-
+  
     console.log(transformedData);
-
+  
     this.http.post<HeartDiseaseResponse>('https://localhost:7133/api/HeartDisease', transformedData)
       .subscribe(
         (response) => {
           this.heartDiseaseService.setHeartDiseaseResponse(response);
-
+  
           const averageProbability = response.average_probability;
-
+  
           if (averageProbability <= 33) {
             this.openModal(modalTemplate);  
           } else if (averageProbability > 33 && averageProbability < 66) {
@@ -114,4 +139,5 @@ export class MainPageComponent {
         }
       );
   }
+  
 }
