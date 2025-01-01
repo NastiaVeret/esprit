@@ -1,16 +1,15 @@
-
 <div class="modal {{ size }}">
     <div class="modal-header">
-      {{ title }}
-      <span class="modal-close" (click)="close()">✕</span>
+        {{ title }}
+        <span class="modal-close" (click)="close()">✕</span>
     </div>
-    
+
     <div class="modal-content">
-      <ng-container #dynamicComponentContainer class="container"></ng-container>
-      <button class="btn" (click)="loadOtherComponent()">Детальніше</button>
-      <ng-content></ng-content>
+        <ng-container #dynamicComponentContainer class="container"></ng-container>
+        <button class="btn" (click)="loadOtherComponent()">Детальніше</button>
+        <button class="btn2" (click)="loadRecomendation()">Рекомендації</button>
+        <ng-content></ng-content>
     </div>
-  </div>
-  
-  <div class="modal-backdrop" (click)="close()"></div>
-  
+</div>
+
+<div class="modal-backdrop" (click)="close()"></div>

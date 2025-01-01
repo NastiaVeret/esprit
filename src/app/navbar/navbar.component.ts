@@ -16,7 +16,7 @@ export class NavbarComponent {
   constructor(private router: Router) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        if (event.url === '/home' || event.url === '/tips' || event.url === '/') {
+        if (event.url === '/home' || event.url === '/tips' || event.url === '/'|| event.url === '/about-us') {
           this.navbarClass = 'navbar-home';
         } else if (event.url === '/MainPage') {
           this.navbarClass = 'navbar-main';

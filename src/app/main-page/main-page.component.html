@@ -81,7 +81,12 @@
                 </div>
             </div>
             <div class="input-container">
-                <input class="input7" type="text" [(ngModel)]="formData.restingECG" name="restingECG" required placeholder="Результат ЕКГ">
+                <select class="input7 restingECG" (change)="onRestingECGChange($event)" [class.placeholder]="!formData.restingECG">
+                    <option value="" disabled [selected]="formData.restingECG === null">Результат ЕКГ</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
                 <div class="rectangle7">
                     <span class="info" id="info">i</span>
                 </div>
